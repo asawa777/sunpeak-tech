@@ -5,15 +5,15 @@ import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Scene } from "@/components/3d/scene"
-import { LogoHero } from "@/components/3d/logo-hero"
+import { NeuralCityHero } from "@/components/3d/neural-city-hero"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-black">
-      {/* 3D Logo Scene Background */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#0a1525]">
+      {/* 3D Neural City Scene Background */}
       <div className="absolute inset-0 z-0 opacity-100">
          <Scene className="w-full h-full">
-            <LogoHero />
+            <NeuralCityHero />
          </Scene>
       </div>
       
