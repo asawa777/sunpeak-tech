@@ -127,7 +127,7 @@ export function CityHero() {
         </Instances>
 
         {/* Cloud Layer (Atmosphere) */}
-        <Cloud opacity={0.2} speed={0.1} width={40} depth={20} segments={10} position={[0, 25, -20]} color="#050a14" />
+        <Cloud opacity={0.2} speed={0.1} bounds={[40, 4, 20]} segments={10} position={[0, 25, -20]} color="#050a14" />
 
         {/* Environment / Lighting */}
         <Stars radius={100} depth={50} count={3000} factor={4} saturation={0} fade />

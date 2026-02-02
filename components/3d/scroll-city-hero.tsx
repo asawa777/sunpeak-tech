@@ -59,7 +59,7 @@ export function ScrollCityHero() {
        <Highways />
 
        {/* 🎨 ATMOSPHERE */}
-       <Cloud opacity={0.3} speed={0.1} width={50} depth={20} position={[0, 15, -20]} color="#0a1525" />
+       <Cloud opacity={0.3} speed={0.1} bounds={[50, 4, 20]} position={[0, 15, -20]} color="#0a1525" />
        <fog attach="fog" args={["#020408", 10, 120]} />
        <ambientLight intensity={0.4} color="#001020" />
        <pointLight position={[30, 40, 20]} intensity={1} color="#00f0ff" distance={80} />
