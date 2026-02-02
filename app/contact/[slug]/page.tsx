@@ -4,6 +4,7 @@ import { notFound } from "next/navigation"
 import { PageTemplate } from "@/components/templates/page-template"
 import { Button } from "@/components/ui/button"
 import { Mail, Phone, Clock, MapPin } from "lucide-react"
+import { ConsultationForm } from "@/components/forms/consultation-form"
 
 interface PageProps { params: Promise<{ slug: string }> }
 
@@ -58,40 +59,9 @@ export default async function ContactSubPage({ params }: PageProps) {
             </div>
          )}
          
-         {/* Consultation Form (Visual) */}
+         {/* Consultation Form (Functional) */}
          {content?.consultationTypes && (
-            <div className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-sm">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                   <div className="space-y-2">
-                      <label className="text-sm font-medium">Full Name</label>
-                      <input type="text" className="w-full p-3 rounded-lg border border-input bg-background" placeholder="John Doe" />
-                   </div>
-                   <div className="space-y-2">
-                      <label className="text-sm font-medium">Work Email</label>
-                      <input type="email" className="w-full p-3 rounded-lg border border-input bg-background" placeholder="john@company.com" />
-                   </div>
-                </div>
-                
-                <div className="space-y-4 mb-8">
-                   <label className="text-sm font-medium">Topic of Consultation</label>
-                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                      {content.consultationTypes.map((type: string, i: number) => (
-                         <label key={i} className="flex items-center gap-3 p-3 rounded-lg border border-border hover:bg-secondary/50 cursor-pointer transition-colors">
-                            <input type="radio" name="topic" className="accent-primary h-4 w-4" />
-                            <span className="text-sm">{type}</span>
-                         </label>
-                      ))}
-                   </div>
-                </div>
-
-                <div className="space-y-2 mb-8">
-                   <label className="text-sm font-medium">Project Details (Optional)</label>
-                   <textarea className="w-full p-3 rounded-lg border border-input bg-background min-h-[100px]" placeholder="Briefly describe your requirements..." />
-                </div>
-
-                <Button size="lg" className="w-full md:w-auto">Request Free Consultation</Button>
-                <p className="text-xs text-muted-foreground mt-4 text-center">{content.formNote}</p>
-            </div>
+            <ConsultationForm types={content.consultationTypes} note={content.formNote} />
          )}
 
          {/* Partner Types */}

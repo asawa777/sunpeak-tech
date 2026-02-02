@@ -78,7 +78,7 @@ export function Header() {
                 <Link href="/contact/support">Support</Link>
              </Button>
             <Button variant="gradient" size="sm" asChild>
-              <Link href="/contact/request-quote">Get a Quote</Link>
+              <a href="tel:0969199797">Get a Quote</a>
             </Button>
           </div>
 
@@ -131,9 +131,9 @@ export function Header() {
                   <Button className="w-full" variant="ghost" asChild>
                      <Link href="/contact/support">Support</Link>
                   </Button>
-                  <Button className="w-full" variant="gradient" asChild>
-                     <Link href="/contact/request-quote">Get a Quote</Link>
-                  </Button>
+                   <Button className="w-full" variant="gradient" asChild>
+                      <a href="tel:0969199797">Get a Quote</a>
+                   </Button>
                </div>
             </div>
           </motion.div>
