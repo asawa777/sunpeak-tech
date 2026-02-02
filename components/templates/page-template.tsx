@@ -14,9 +14,10 @@ interface PageTemplateProps {
   badge?: string
   type?: "general" | "tech" | "security"
   content?: string
+  children?: React.ReactNode
 }
 
-export function PageTemplate({ title, description, badge, type = "general" }: PageTemplateProps) {
+export function PageTemplate({ title, description, badge, type = "general", children }: PageTemplateProps) {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -53,27 +54,31 @@ export function PageTemplate({ title, description, badge, type = "general" }: Pa
         {/* Content Section */}
         <section className="py-20 md:py-24">
            <div className="container px-4 max-w-4xl mx-auto space-y-12">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                 <p className="lead text-2xl font-light text-muted-foreground">
-                    At Sunpeak Tech, we believe in delivering excellence through our 
-                    <strong> {title} </strong> services. Our team works tirelessly to ensure
-                    top-tier performance and reliability.
-                 </p>
-                 <hr className="my-12 border-muted" />
-                 <h3>Key Features & Benefits</h3>
-                 <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
-                    {["Scalable Architecture", "24/7 Monitoring", "Cost Effective", "Future Proof"].map((item) => (
-                       <li key={item} className="flex items-center p-4 bg-card border border-border rounded-lg shadow-sm">
-                          <div className="h-2 w-2 rounded-full bg-primary mr-3" />
-                          {item}
-                       </li>
-                    ))}
-                 </ul>
-                 <p>
-                    Leveraging cutting-edge technologies, we provide solutions that are not just effective but also sustainable. 
-                    Whether you are a startup or a large enterprise, our {title?.toLowerCase() || 'services'} capabilities are designed to scale with you.
-                 </p>
-              </div>
+              {children ? (
+                children
+              ) : (
+                <div className="prose prose-lg dark:prose-invert max-w-none">
+                   <p className="lead text-2xl font-light text-muted-foreground">
+                      At Sunpeak Tech, we believe in delivering excellence through our 
+                      <strong> {title} </strong> services. Our team works tirelessly to ensure
+                      top-tier performance and reliability.
+                   </p>
+                   <hr className="my-12 border-muted" />
+                   <h3>Key Features & Benefits</h3>
+                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose">
+                      {["Scalable Architecture", "24/7 Monitoring", "Cost Effective", "Future Proof"].map((item) => (
+                         <li key={item} className="flex items-center p-4 bg-card border border-border rounded-lg shadow-sm">
+                            <div className="h-2 w-2 rounded-full bg-primary mr-3" />
+                            {item}
+                         </li>
+                      ))}
+                   </ul>
+                   <p>
+                      Leveraging cutting-edge technologies, we provide solutions that are not just effective but also sustainable. 
+                      Whether you are a startup or a large enterprise, our {title?.toLowerCase() || 'services'} capabilities are designed to scale with you.
+                   </p>
+                </div>
+              )}
            </div>
         </section>
 

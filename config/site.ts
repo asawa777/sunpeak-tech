@@ -43,6 +43,7 @@ export const siteConfig = {
              { title: "Asset Management System", href: "/solutions/software-programs/asset-management-system" },
              { title: "Booking & Resource Management System", href: "/solutions/software-programs/booking-resource-management-system" },
              { title: "Service & Feedback System", href: "/solutions/software-programs/service-feedback-system" },
+             { title: "Customize Service", href: "/solutions/software-programs/customize-service" },
            ]
         },
         {
@@ -148,12 +149,12 @@ export const siteConfig = {
     },
      {
        title: "Contact",
-       href: "/contact-us",
+       href: "/contact",
         items: [
-          { title: "Contact Information", href: "/contact-us/contact-information" },
-          { title: "Request a Consultation", href: "/contact-us/request-a-consultation" },
-          { title: "Partner with Us", href: "/contact-us/partner-with-us" },
-           { title: "Office Locations", href: "/contact-us/office-locations" },
+          { title: "Contact Information", href: "/contact/contact-information" },
+          { title: "Request a Consultation", href: "/contact/request-a-consultation" },
+          { title: "Partner with Us", href: "/contact/partner-with-us" },
+           { title: "Office Locations", href: "/contact/office-locations" },
        ]
     },
   ]

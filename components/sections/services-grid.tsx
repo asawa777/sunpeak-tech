@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Server, Shield, Code2, Cpu, Headphones, ArrowRight } from "lucide-react"
+import { Server, Shield, Code2, Cpu, Headphones, ArrowRight, GraduationCap } from "lucide-react"
 import Link from "next/link"
 
 const services = [
@@ -30,11 +30,17 @@ const services = [
     href: "/services/smart-systems"
   },
   {
-     title: "Managed Services",
-     description: "24/7 IT support, system maintenance, and on-site assistance.",
-     icon: Headphones,
-     href: "/services/managed-services"
-   }
+    title: "Managed Services",
+    description: "24/7 IT support, system maintenance, and on-site assistance.",
+    icon: Headphones,
+    href: "/services/managed-services"
+  },
+  {
+    title: "Training & Education",
+    description: "Professional workshops, seminars, and academic research collaboration.",
+    icon: GraduationCap,
+    href: "/solutions/research-training"
+  }
 ]
 
 export function ServicesGrid() {

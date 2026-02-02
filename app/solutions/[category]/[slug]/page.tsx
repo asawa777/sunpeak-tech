@@ -3,10 +3,10 @@ import { siteConfig } from "@/config/site"
 import { notFound } from "next/navigation"
 
 interface PageProps {
-  params: {
+  params: Promise<{
     category: string
     slug: string
-  }
+  }>
 }
 
 // Helper to find page data
@@ -46,13 +46,16 @@ export function generateStaticParams() {
    return params
 }
 
-export default function SolutionPage({ params }: PageProps) {
-  const data = getPageData(params.category, params.slug)
+import { solutionsContent } from "@/config/solutions-content"
+
+export default async function SolutionPage({ params }: PageProps) {
+  const { category, slug } = await params
+  const navData = getPageData(category, slug)
+  const content = solutionsContent[slug as keyof typeof solutionsContent]
   
-  if (!data || !params?.slug) {
-    // Basic fallback for development
-     const title = params?.slug 
-       ? params.slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
+  if (!content && !navData) {
+     const title = slug 
+       ? slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())
        : "Solution"
        
      return (
@@ -65,12 +68,40 @@ export default function SolutionPage({ params }: PageProps) {
      )
   }
 
+  const title = content?.title || navData?.title || slug
+  const description = content?.description || `State-of-the-art ${title} solutions.`
+  const badge = content?.badge || navData?.category || "Solutions"
+  // Map scene to type or handle generically. simplified for now to "tech" or "general"
+  const type = (content?.scene === 'shield' ? 'security' : 'tech') as any
+
   return (
     <PageTemplate 
-      title={data.title}
-      description={`State-of-the-art ${data.title} solutions for modern businesses.`}
-      badge={data.category}
-      type="tech"
-    />
+      title={title}
+      description={description}
+      badge={badge}
+      type={type}
+    >
+      <div className="prose prose-lg dark:prose-invert max-w-none">
+        
+        {content?.features && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-12">
+            {content.features.map((feature: string) => (
+               <div key={feature} className="flex items-center p-4 bg-card border border-border rounded-xl shadow-sm">
+                  <div className="h-8 w-8 rounded-full bg-primary/10 text-primary flex items-center justify-center mr-4 font-bold">
+                    ⚡
+                  </div>
+                  <span className="font-medium">{feature}</span>
+               </div>
+            ))}
+          </div>
+        )}
+
+        {content?.content ? (
+          <div dangerouslySetInnerHTML={{ __html: content.content }} />
+        ) : (
+           <p>Detailed information about {title} is coming soon.</p>
+        )}
+      </div>
+    </PageTemplate>
   )
 }
