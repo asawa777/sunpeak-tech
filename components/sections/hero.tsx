@@ -4,33 +4,41 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
+import { Scene } from "@/components/3d/scene"
+import { MasterHero } from "@/components/3d/master-hero"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Gradient Mesh */}
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent opacity-70 dark:from-blue-900/40"></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-purple-500/20 rounded-full blur-[100px] animate-pulse"></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-black">
+      {/* 3D Master Scene Background */}
+      <div className="absolute inset-0 z-0 opacity-80">
+         <Scene className="w-full h-full">
+            <MasterHero />
+         </Scene>
+      </div>
+      
+      {/* Overlay Gradient for Text Readability */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-b from-background/10 via-background/60 to-background/90 pointer-events-none" />
 
-      <div className="container px-4 text-center z-10">
+      <div className="container px-4 text-center z-10 relative">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-4xl mx-auto space-y-6"
+          className="max-w-4xl mx-auto space-y-8"
         >
-          <div className="inline-block rounded-full bg-secondary px-4 py-1.5 text-sm font-medium text-secondary-foreground mb-4">
+          <div className="inline-block rounded-full bg-secondary/10 border border-cyan-500/30 px-4 py-1.5 text-sm font-medium text-cyan-400 mb-6 backdrop-blur-md">
             🚀 Innovating the Future of IT
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-foreground leading-[1.1]">
+          <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-white leading-[1.1] drop-shadow-2xl">
             Intelligent Solutions for a <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 animate-gradient-x">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 animate-gradient-x p-2">
               Connected World
             </span>
           </h1>
 
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
              We empower enterprises, governments, and industries with next-gen IT infrastructure, cybersecurity, and smart systems.
           </p>
 
@@ -51,13 +59,6 @@ export function Hero() {
           </motion.div>
         </motion.div>
       </div>
-
-       {/* Decorative Elements */}
-       <div className="absolute bottom-10 left-0 w-full flex justify-center animate-bounce">
-          <div className="h-10 w-6 border-2 border-muted-foreground rounded-full flex justify-center p-1">
-             <div className="w-1 h-3 bg-muted-foreground rounded-full" />
-          </div>
-       </div>
     </section>
   )
 }
