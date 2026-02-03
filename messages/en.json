@@ -19,6 +19,7 @@
     "asset_sys": "Asset Management System",
     "booking_sys": "Booking & Resource Management System",
     "feedback_sys": "Service & Feedback System",
+    "customize_sys": "Customize System",
     "telecom_comm": "Telecom & Communication",
     "comm_network": "Communication & Network Systems",
     "optical_fiber": "Optical Fiber Infrastructure",
@@ -361,6 +362,19 @@
           "2": { "title": "Fire Suppression", "desc": "Advanced detection and suppression systems." }
         },
         "technicalSpecs": ["BIM Modeling", "Energy Audits", "Compliance Checks"]
+      },
+      "customize-system": {
+          "title": "Customize System",
+          "description": "Bespoke software solutions tailored to your unique workflows.",
+          "badge": "Software",
+          "overview": "When off-the-shelf software falls short, we build custom ecosystems that fit your business like a glove. From specialized ERP modules to proprietary data analysis tools, we turn unique challenges into competitive advantages.",
+          "features": {
+              "0": { "title": "Requirement Analysis", "desc": "Deep dive workshops to map your specific processes." },
+              "1": { "title": "Agile Development", "desc": "Rapid prototyping and iterative delivery." },
+              "2": { "title": "Legacy Integration", "desc": "Seamlessly connecting modern apps with old systems." }
+          },
+          "technicalSpecs": ["React/Next.js", "Python/Go", "Microservices", "Docker/K8s"],
+          "scene": "tech"
       }
 
   },
@@ -450,6 +464,32 @@
       "office": { "title": "Office Locations", "description": "Visit our headquarters in Bangkok, Thailand." }
     },
     "trust": "Trusted by Enterprise Clients across Thailand"
+  },
+  "contactContent": {
+      "support": {
+          "title": "Support Center",
+          "description": "We are here to help. Get technical assistance or track your tickets.",
+          "badge": "Helpdesk",
+          "overview": "Access our dedicated support portal for 24/7 assistance. Our certified engineers are ready to resolve your issues rapidly.",
+          "details": [
+             { "label": "Hotline", "value": "+66 2 123 4567", "type": "phone" },
+             { "label": "Email", "value": "support@sunpeak.tech", "type": "email" },
+             { "label": "Hours", "value": "24/7 for SLA Clients", "type": "clock" }
+          ],
+          "scene": "general"
+      },
+      "partner-with-us": {
+          "title": "Partner With Us",
+          "description": "Join our ecosystem of technology innovators.",
+          "badge": "Alliance",
+          "overview": "We believe in the power of collaboration. Whether you are a hardware vendor, software provider, or system integrator, let's build the future together.",
+          "partnerTypes": [
+              { "title": "Technology Partners", "desc": "Integrate your products into our solutions ecosystem." },
+              { "title": "Channel Partners", "desc": "Resell Sunpeak services to your client base." },
+              { "title": "Strategic Alliances", "desc": "Joint go-to-market strategies for large-scale tenders." }
+          ],
+          "scene": "orb"
+      }
   },
   "industriesContent": {
       "government-public-sector": {
@@ -608,7 +648,9 @@
         { "title": "Solution Architecture", "desc": "Holistic design of hardware and software ecosystems." },
         { "title": "Feasibility Studies", "desc": "Technical and financial analysis of proposed projects." },
         { "title": "Prototype Development", "desc": "Proof-of-concept creation to validate designs." }
-      ]
+      ],
+      "technicalSpecs": ["AutoCAD", "Visio", "BIM", "UML Modeling"],
+      "scene": "tech"
     }
   },
   "innovationContent": {
@@ -675,8 +717,12 @@
       "title": "Smart Building & Construction",
       "description": "Intelligent infrastructure for modern cities.",
       "badge": "Construction",
-      "overview": "Integrating IoT and BMS systems into the physical fabric of buildings.",
-      "content": "Case Study: The Green Tower - Singapore."
+      "overview": "Integrating IoT and BMS systems into the physical fabric of buildings to create self-regulating environments.",
+      "challenge": "A 50-story mixed-use skyscraper in Bangkok consumed 30% more energy than projected and lacked centralized security management.",
+      "solution": "We deployed a unified Smart Building Management System (BMS) integrating 5,000+ sensors for lighting, HVAC, and access control.",
+      "result": "achieved LEED Gold certification, reduced energy costs by 25%, and improved tenant satisfaction scores by 40%.",
+      "techStack": ["Siemens Desigo", "IoT Sensors", "Cloud Analytics"],
+      "scene": "city"
     },
     "it-digital-solutions": {
       "title": "IT & Digital Solutions",

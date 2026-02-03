@@ -43,6 +43,7 @@ export const siteConfig = {
              { title: "nav.asset_sys", href: "/solutions/software-programs/asset-management-system" },
              { title: "nav.booking_sys", href: "/solutions/software-programs/booking-resource-management" },
              { title: "nav.feedback_sys", href: "/solutions/software-programs/service-feedback-system" },
+             { title: "nav.customize_sys", href: "/solutions/software-programs/customize-system" },
           ]
         },
         {
@@ -144,6 +145,7 @@ export const siteConfig = {
        title: "nav.contact",
        href: "/contact",
        items: [
+          { title: "nav.support", href: "/contact/support" },
           { title: "nav.partner_with_us", href: "/contact/partner-with-us" },
        ]
     },

@@ -113,7 +113,7 @@ export default async function Page({ params }: PageProps) {
       return 'general';
   };
 
-  const visualType = getVisualTheme(slug[slug.length-1]);
+  const visualType = serviceContent?.scene || getVisualTheme(slug[slug.length-1]);
 
   return (
     <PageTemplate

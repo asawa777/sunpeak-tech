@@ -50,8 +50,9 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
 
   // Determine Visual Theme
   const getVisualTheme = (s: string) => {
+     if (content?.scene) return content.scene; // Allow override from JSON
      if (s.includes('construction') || s.includes('smart-building') || s.includes('infrastructure')) return 'city';
-     if (s.includes('tech') || s.includes('digital') || s.includes('telecom')) return 'tech';
+     if (s.includes('tech') || s.includes('digital') || s.includes('telecom') || s.includes('cyber') || s.includes('security')) return 'tech';
      return 'orb';
   }
 
