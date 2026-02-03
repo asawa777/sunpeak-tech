@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "../globals.css";
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,6 +41,13 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
 };
 
+export function generateStaticParams() {
+  return [
+    {locale: 'en'},
+    {locale: 'th'}
+  ];
+}
+
 export default async function LocaleLayout({
   children,
   params
@@ -49,6 +56,10 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
+  
+  // Enable static rendering
+  setRequestLocale(locale);
+
   let messages;
   try {
      messages = await getMessages();

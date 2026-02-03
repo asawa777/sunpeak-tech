@@ -1,18 +1,19 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PageTemplate } from "@/components/templates/page-template";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
     locale: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'projectsContent' });
   
   let content: any;
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function ProjectCaseStudy({ params }: PageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'projectsContent' });
 
   let content: any = null;
@@ -46,12 +48,19 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
      { label: "Result", text: content.result }
   ].filter(d => d.text);
 
+  // Determine Visual Theme
+  const getVisualTheme = (s: string) => {
+     if (s.includes('construction') || s.includes('smart-building') || s.includes('infrastructure')) return 'city';
+     if (s.includes('tech') || s.includes('digital') || s.includes('telecom')) return 'tech';
+     return 'orb';
+  }
+
   return (
       <PageTemplate 
           title={content.title}
           description={content.description}
           badge={content.badge || "Case Study"}
-          type="grid"
+          type={getVisualTheme(slug) as any}
       >
           <div className="max-w-4xl mx-auto space-y-12">
              <Link href="/projects" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary transition-colors">

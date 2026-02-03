@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { PageHeader } from "@/components/sections/page-header"
 import { Scene } from "@/components/3d/scene"
+import { ScrollCityHero } from "@/components/3d/scroll-city-hero"
 import { GlowingOrb } from "@/components/3d/glowing-orb"
 import { NetworkGrid } from "@/components/3d/network-grid"
 import { motion } from "framer-motion"
@@ -23,10 +24,11 @@ export function PageTemplate({ title, description, badge, type = "general", chil
       <Header />
       <main className="flex-1">
         {/* 3D Hero Section */}
-        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-secondary/20">
+        <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-background to-secondary/20">
            <div className="absolute inset-0 z-0 opacity-50">
               <Scene className="w-full h-full">
-                 {(type === 'tech' || type === 'grid') ? <NetworkGrid /> : <GlowingOrb />}
+                 {type === 'city' ? <ScrollCityHero /> : 
+                  (type === 'tech' || type === 'grid') ? <NetworkGrid /> : <GlowingOrb />}
               </Scene>
            </div>
            

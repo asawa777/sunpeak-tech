@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react"; // Import CheckCircle2 for features list
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 interface PageProps {
   params: Promise<{
@@ -54,6 +54,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale });
   const tServices = await getTranslations({ locale, namespace: 'newServices' });
   const data = getPageData(slug);
@@ -76,6 +77,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function Page({ params }: PageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale });
   const tNav = await getTranslations({ locale, namespace: 'nav' });
   const tServices = await getTranslations({ locale, namespace: 'newServices' });
@@ -94,12 +96,31 @@ export default async function Page({ params }: PageProps) {
   const serviceContent = isLeaf ? tServices.raw(contentKey) : null;
   const hasSpecificContent = serviceContent && serviceContent !== contentKey; // Check if translation exists
 
+  // Determine 3D Visual Theme based on slug
+  const getVisualTheme = (slugKey: string) => {
+      // Tech / Grid Theme
+      if (['information-technology', 'cyber-security', 'software-programs', 
+           'telecom-communication', 'asset-management-system', 'booking-resource-management', 
+           'service-feedback-system', 'it-support-maintenance'].some(k => slugKey.includes(k))) return 'tech';
+      
+      // City / Construction Theme
+      if (['construction-interior-decoration', 'smart-building', 'building-construction-renovation', 
+           'smart-city-infrastructure', 'mep-systems'].some(k => slugKey.includes(k))) return 'city';
+      
+      // Orb / Innovation Theme
+      if (['research-training', 'research-academic-services', 'innovation-rnd'].some(k => slugKey.includes(k))) return 'orb';
+
+      return 'general';
+  };
+
+  const visualType = getVisualTheme(slug[slug.length-1]);
+
   return (
     <PageTemplate
       title={t(data.title)}
       description={hasSpecificContent ? serviceContent.description : t('servicesPage.description')}
       badge={hasSpecificContent ? serviceContent.badge : t('servicesPage.badge')}
-      type="tech"
+      type={visualType as any}
     >
       <div className="container max-w-5xl mx-auto">
         

@@ -277,6 +277,90 @@
              "2": { "title": "Tech Transfer", "desc": "Commercialization of academic innovations." }
          },
          "technicalSpecs": ["Grant Management", "IP Protection", "Lab Setup"]
+      },
+      "asset-management-system": {
+        "title": "Asset Management System",
+        "description": "Comprehensive digital tracking for enterprise assets.",
+        "badge": "Software",
+        "overview": "Our Asset Management System (AMS) provides real-time visibility into your physical and digital assets. Track lifecycle, depreciation, and maintenance schedules in one unified dashboard.",
+        "features": {
+          "0": { "title": "Real-time Tracking", "desc": "RFID and barcode integration for instant location updates." },
+          "1": { "title": "Lifecycle Management", "desc": "From procurement to disposal, track every stage." },
+          "2": { "title": "Depreciation Calc", "desc": "Automated financial reporting and audit readiness." }
+        },
+        "technicalSpecs": ["Cloud-Native", "Mobile App Support", "API Integration"]
+      },
+      "booking-resource-management": {
+        "title": "Booking & Resource Management",
+        "description": "Optimize facility usage with intelligent scheduling.",
+        "badge": "Software",
+        "overview": "Maximize the utilization of your meeting rooms, hot desks, and shared equipment. Our system prevents double-booking and provides analytics on usage patterns.",
+        "features": {
+          "0": { "title": "Visual Booking", "desc": "Interactive floor plans for easy reservation." },
+          "1": { "title": "Calendar Sync", "desc": "Integration with Outlook and Google Calendar." },
+          "2": { "title": "Usage Analytics", "desc": "Heatmaps and reports on resource efficiency." }
+        },
+        "technicalSpecs": ["Outlook Plugin", "Mobile Friendly", "SSO Auth"]
+      },
+      "service-feedback-system": {
+        "title": "Service & Feedback System",
+        "description": "Elevate customer experience with actionable insights.",
+        "badge": "Software",
+        "overview": "Capture customer sentiment in real-time. Our system collects feedback across multiple touchpoints and uses AI to identify trends and areas for improvement.",
+        "features": {
+          "0": { "title": "Multi-Channel", "desc": "Kiosk, QR code, and email feedback collection." },
+          "1": { "title": "AI Analysis", "desc": "Sentiment analysis and keyword extraction." },
+          "2": { "title": "Ticket Auto-Creation", "desc": "Turn negative feedback into support tickets instantly." }
+        },
+        "technicalSpecs": ["Real-time Dashboard", "Multi-language", "Custom Workflows"]
+      },
+      "engineering-detail-design": {
+        "title": "Engineering Detail Design",
+        "description": "Precision engineering for complex telecom infrastructure.",
+        "badge": "Engineering",
+        "overview": "We provide end-to-end engineering services for outside plant (OSP) and inside plant (ISP) deployments. Our designs ensure compliance with regulatory standards and optimal network performance.",
+        "features": {
+          "0": { "title": "OSP Design", "desc": "Underground duct banks and aerial cable routing." },
+          "1": { "title": "ISP Design", "desc": "Structured cabling and equipment room layout." },
+          "2": { "title": "Permitting Services", "desc": "Handling ROW applications and government approvals." }
+        },
+        "technicalSpecs": ["AutoCAD/GIS", "BoQ Estimation", "As-Built Documentation"]
+      },
+      "training-seminars": {
+        "title": "Training & Seminars",
+        "description": "Empowering your workforce with the latest technical skills.",
+        "badge": "Education",
+        "overview": "Our expert-led training programs cover the latest in cybersecurity, cloud computing, and network engineering. We offer both hands-on workshops and certification prep courses.",
+        "features": {
+          "0": { "title": "Custom Curriculum", "desc": "Tailored training modules for your specific tech stack." },
+          "1": { "title": "Hands-on Labs", "desc": "Practical experience in simulated environments." },
+          "2": { "title": "Certification Prep", "desc": "Courses for Cisco, Microsoft, and AWS certifications." }
+        },
+        "technicalSpecs": ["Certified Instructors", "Remote/On-site", "LMS Access"]
+      },
+      "building-construction-renovation": {
+        "title": "Building Construction & Renovation",
+        "description": "Modernizing physical spaces for the digital age.",
+        "badge": "Construction",
+        "overview": "We specialize in retrofitting existing buildings with smart technology and modern amenities. From structural reinforcement to aesthetic upgrades, we deliver turnkey construction solutions.",
+        "features": {
+          "0": { "title": "Smart Retrofit", "desc": "Integrating IoT sensors into legacy structures." },
+          "1": { "title": "Interior Fit-out", "desc": "Modern office designs optimized for collaboration." },
+          "2": { "title": "Green Building", "desc": "Upgrades for energy efficiency and LEED certification." }
+        },
+        "technicalSpecs": ["Turnkey Project Mgmt", "Safety Standards", "3D Rendering"]
+      },
+      "mep-systems": {
+        "title": "MEP Systems",
+        "description": "Mechanical, Electrical, and Plumbing engineering excellence.",
+        "badge": "Engineering",
+        "overview": "The lifeline of any building. We design and install robust MEP systems that ensure comfort, safety, and efficiency. Our integrated approach coordinates all subsystems for seamless operation.",
+        "features": {
+          "0": { "title": "HVAC Optimization", "desc": "Energy-efficient climate control systems." },
+          "1": { "title": "Electrical Power", "desc": "Reliable power distribution and backup generators." },
+          "2": { "title": "Fire Suppression", "desc": "Advanced detection and suppression systems." }
+        },
+        "technicalSpecs": ["BIM Modeling", "Energy Audits", "Compliance Checks"]
       }
 
   },
@@ -514,6 +598,17 @@
         { "title": "On-Site Repair", "desc": "Hardware fix and replacement." },
         { "title": "SLA Guarantees", "desc": "Committed response times." }
       ]
+    },
+    "system-design-engineering": {
+      "title": "System Design & Engineering",
+      "description": "Architecting the blueprint for your digital success.",
+      "badge": "Engineering",
+      "overview": "Our core competency. We design complex, integrated systems that solve specific business problems. From high-level architecture to detailed schematics, we ensure every component fits perfectly.",
+      "features": [
+        { "title": "Solution Architecture", "desc": "Holistic design of hardware and software ecosystems." },
+        { "title": "Feasibility Studies", "desc": "Technical and financial analysis of proposed projects." },
+        { "title": "Prototype Development", "desc": "Proof-of-concept creation to validate designs." }
+      ]
     }
   },
   "innovationContent": {
@@ -589,6 +684,26 @@
       "badge": "Enterprise",
       "overview": "Cloud migration, cybersecurity overhaul, and custom software development.",
       "content": "Case Study: FinTech Core Banking Migration."
+    },
+    "cyber-security": {
+      "title": "Cyber Security Projects",
+      "description": "Defending critical infrastructure against modern threats.",
+      "badge": "Security",
+      "overview": "A showcase of our high-stakes security implementations. We have secured national data centers, financial institutions, and power grids against sophisticated cyber attacks.",
+      "challenge": "A leading regional bank faced increasing ransomware attacks and needed a zero-trust architecture overhaul without disrupting daily operations.",
+      "solution": "We deployed a comprehensive SOC, implemented micro-segmentation, and upgraded identity management systems across 500+ branches.",
+      "result": "Zero successful breaches in the 24 months post-implementation, with a 40% reduction in security operational costs.",
+      "techStack": ["Palo Alto Networks", "Splunk", "CrowdStrike", "Okta"]
+    },
+    "telecom-infrastructure": {
+      "title": "Telecom Infrastructure Projects",
+      "description": "Connecting the nation with next-gen fiber and wireless.",
+      "badge": "Telecom",
+      "overview": "Deploying the backbone of the digital economy. Our projects span from metro fiber rings to rural 5G expansion.",
+      "challenge": "Extend high-speed internet access to 50 remote villages in Northern Thailand within a strict 6-month government mandate.",
+      "solution": "Designed a hybrid network using optical ground wire (OPGW) and high-capacity microwave links to traverse difficult mountainous terrain.",
+      "result": "Successfully connected 15,000 households and 20 schools to gigabit internet ahead of schedule.",
+      "techStack": ["Optical Fiber", "Microwave Backhaul", "FTTx", "Solar Power Systems"]
     }
   },
   "newsContent": {

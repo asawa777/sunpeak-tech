@@ -1,13 +1,21 @@
-import { useTranslations } from 'next-intl';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import Link from 'next/link';
+import { PageTemplate } from '@/components/templates/page-template';
 
-export default function AboutSubPage({ params }: { params: { slug: string } }) {
-  const t = useTranslations('aboutPage');
-  const slug = params.slug;
+// Generate static params for all valid slugs
+export function generateStaticParams() {
+  const validSlugs = ['company-overview', 'vision-mission', 'management-team', 'certifications-standards', 'partners-alliances'];
+  return validSlugs.map((slug) => ({ slug }));
+}
+
+export default async function AboutSubPage({ params }: { params: Promise<{ slug: string; locale: string }> }) {
+  const { slug, locale } = await params;
+  setRequestLocale(locale);
+  
+  const t = await getTranslations({locale, namespace: 'aboutPage'});
 
   const validSlugs = ['company-overview', 'vision-mission', 'management-team', 'certifications-standards', 'partners-alliances'];
 
@@ -15,18 +23,18 @@ export default function AboutSubPage({ params }: { params: { slug: string } }) {
     notFound();
   }
 
-  // Construct keys dynamically
-  // Note: This relies on the structure set in messages/xx.json
-  
   const title = t(`${slug}.title`);
   const description = t(`${slug}.description`);
   const badge = t(`${slug}.badge`);
-  
-  // Content rendering based on slug type
-  // This is a bit complex because the JSON structure varies (content string vs object vs array)
-  // We can render specific components based on slug check.
+
+  const getVisualTheme = (s: string) => {
+     if (s === 'partners-alliances' || s === 'certifications-standards') return 'grid';
+     if (s === 'management-team') return 'tech';
+     return 'orb';
+  }
 
   const renderContent = () => {
+
     if (slug === 'company-overview') {
         return (
             <div className="grid md:grid-cols-2 gap-12">
@@ -104,40 +112,29 @@ export default function AboutSubPage({ params }: { params: { slug: string } }) {
   };
 
   return (
-    <div className="min-h-screen pt-20">
-      <section className="relative py-20 bg-muted/30 border-b">
-        <div className="container px-4 text-center">
-            <Badge variant="outline" className="mb-4 text-primary border-primary/20">
-              {badge}
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 max-w-4xl mx-auto">
-              {title}
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 text-balance max-w-2xl mx-auto">
-              {description}
-            </p>
-        </div>
-      </section>
-
-      <section className="py-16">
-        <div className="container px-4">
-             {renderContent()}
-        </div>
-      </section>
-      
-      <section className="py-20 border-t">
-        <div className="container px-4 text-center">
-             <h2 className="text-2xl font-bold mb-6">Interested in learning more?</h2>
-             <div className="flex justify-center gap-4">
-                 <Button asChild>
-                     <Link href="/contact">Contact Us</Link>
-                 </Button>
-                 <Button variant="outline" asChild>
-                     <Link href="/services">View Services</Link>
-                 </Button>
-             </div>
-        </div>
-      </section>
-    </div>
+    <PageTemplate 
+      title={title} 
+      description={description} 
+      badge={badge}
+      type={getVisualTheme(slug) as any}
+    >
+      <div className="space-y-20">
+        {renderContent()}
+        
+        <section className="py-20 border-t">
+          <div className="text-center">
+               <h2 className="text-2xl font-bold mb-6">Interested in learning more?</h2>
+               <div className="flex justify-center gap-4">
+                   <Button asChild>
+                       <Link href="/contact">Contact Us</Link>
+                   </Button>
+                   <Button variant="outline" asChild>
+                       <Link href="/services">View Services</Link>
+                   </Button>
+               </div>
+          </div>
+        </section>
+      </div>
+    </PageTemplate>
   );
 }

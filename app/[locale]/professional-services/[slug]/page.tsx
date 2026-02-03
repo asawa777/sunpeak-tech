@@ -1,16 +1,17 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { PageTemplate } from "@/components/templates/page-template";
 
 interface PageProps {
-  params: {
+  params: Promise<{
     slug: string;
     locale: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'professionalServices' });
   
   let content: any;
@@ -26,6 +27,7 @@ export async function generateMetadata({ params }: PageProps) {
 
 export default async function ProfessionalServicePage({ params }: PageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'professionalServices' });
 
   let content: any = null;
@@ -40,12 +42,19 @@ export default async function ProfessionalServicePage({ params }: PageProps) {
   // Handle features array if exists
   const features = content.features as Array<{ title: string; desc: string }> || [];
 
+  // Visual Theme Logic
+  const getVisualTheme = (s: string) => {
+     if (s.includes('design') || s.includes('engineering')) return 'tech';
+     if (s.includes('maintenance') || s.includes('operations')) return 'city';
+     return 'general';
+  }
+
   return (
       <PageTemplate 
           title={content.title}
           description={content.description}
           badge={content.badge || "Service"}
-          type="grid"
+          type={getVisualTheme(slug) as any}
       >
           <div className="max-w-3xl mx-auto space-y-12">
             <div className="prose prose-lg dark:prose-invert">
