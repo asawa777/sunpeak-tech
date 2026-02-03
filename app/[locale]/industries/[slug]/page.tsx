@@ -63,6 +63,15 @@ export default async function IndustryPage({ params }: PageProps) {
         <div className="prose prose-lg dark:prose-invert max-w-none">
            <h2 className="text-3xl font-bold mb-6">{t('nav.company_overview')}</h2>
            <p className="lead text-xl text-muted-foreground">{content.overview}</p>
+           
+           {/* Dynamic Content Sections */}
+           {content.sections && content.sections.map((section: any, idx: number) => (
+              <div key={idx} className="mt-8">
+                  {section.title && <h3 className="text-2xl font-bold mb-4">{section.title}</h3>}
+                  <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: section.content }} />
+              </div>
+           ))}
+           {content.content && <div dangerouslySetInnerHTML={{ __html: content.content }} />}
         </div>
 
         {/* Industry Challenges Grid */}

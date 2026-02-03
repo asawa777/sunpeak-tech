@@ -81,6 +81,21 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
               <h2 className="text-3xl font-bold mb-6">Overview</h2>
               <div className="prose prose-lg dark:prose-invert">
                 <p>{t(`${slug}.overview`)}</p>
+                
+                {/* Dynamic Content Sections */}
+                {(() => {
+                    try {
+                        const rawSections = t.raw(`${slug}.sections`);
+                        if (Array.isArray(rawSections)) {
+                            return rawSections.map((section: any, idx: number) => (
+                                <div key={idx} className="mt-8">
+                                    {section.title && <h3 className="text-2xl font-bold mb-4 text-foreground">{section.title}</h3>}
+                                    <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: section.content }} />
+                                </div>
+                            ));
+                        }
+                    } catch (e) { return null; }
+                })()}
               </div>
               
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">

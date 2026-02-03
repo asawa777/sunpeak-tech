@@ -71,6 +71,15 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
              <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
                     <div className="lg:col-span-2 prose prose-lg dark:prose-invert">
                         <p className="lead text-xl text-muted-foreground">{content.overview}</p>
+                        
+                        {/* Dynamic Content Sections */}
+                        {content.sections && content.sections.map((section: any, idx: number) => (
+                           <div key={idx} className="mt-8">
+                               {section.title && <h3 className="text-2xl font-bold mb-4">{section.title}</h3>}
+                               <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: section.content }} />
+                           </div>
+                        ))}
+
                         {content.content && <div dangerouslySetInnerHTML={{ __html: content.content }} />}
                     </div>
                 

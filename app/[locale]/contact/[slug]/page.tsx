@@ -14,10 +14,10 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: PageProps) {
   const { slug, locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'contactContent' });
+  const t = await getTranslations({ locale });
   
   let content: any = null;
-  try { content = t.raw(slug); } catch (e) { return {}; }
+  try { content = t.raw(`contactContent.${slug}`); } catch (e) { return {}; }
   if(!content) return {};
 
   return {
@@ -29,11 +29,10 @@ export async function generateMetadata({ params }: PageProps) {
 export default async function ContactSubPage({ params }: PageProps) {
   const { slug, locale } = await params
   const t = await getTranslations({ locale });
-  const tContact = await getTranslations({ locale, namespace: 'contactContent' });
 
   let content: any = null;
   try {
-     content = tContact.raw(slug)
+     content = t.raw(`contactContent.${slug}`)
   } catch (e) {
      return notFound()
   }

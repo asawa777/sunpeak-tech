@@ -15,7 +15,7 @@ export function Footer() {
           
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-block">
-              <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+              <span className="text-xl font-bold tracking-tight text-primary">
                 Sunpeak Tech
               </span>
             </Link>

@@ -145,6 +145,7 @@ export const siteConfig = {
        title: "nav.contact",
        href: "/contact",
        items: [
+          { title: "nav.request_consultation", href: "/contact/request-a-consultation" },
           { title: "nav.support", href: "/contact/support" },
           { title: "nav.partner_with_us", href: "/contact/partner-with-us" },
        ]

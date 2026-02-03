@@ -38,7 +38,7 @@ export function Header() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
-            <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
+            <span className="text-xl font-bold tracking-tight text-primary">
               Sunpeak Tech
             </span>
           </Link>

@@ -133,9 +133,17 @@ export default async function Page({ params }: PageProps) {
                  {/* Reusing generic headers or create specific ones */}
                  <p className="lead text-xl text-muted-foreground">{serviceContent.overview}</p>
                  
+                 {/* Dynamic Content Sections (New Enterprise Structure) */}
+                 {serviceContent.sections && serviceContent.sections.map((section: any, idx: number) => (
+                    <div key={idx} className="mt-8">
+                        {section.title && <h3 className="text-2xl font-bold mb-4 text-foreground">{section.title}</h3>}
+                        <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: section.content }} />
+                    </div>
+                 ))}
+
                  {/* Technical Specs Tags */}
                  {serviceContent.technicalSpecs && (
-                    <div className="flex flex-wrap gap-2 my-6">
+                    <div className="flex flex-wrap gap-2 my-8 pt-6 border-t border-border">
                         {serviceContent.technicalSpecs.map((spec: string, i: number) => (
                            <span key={i} className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium border border-primary/20">
                              {spec}
