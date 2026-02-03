@@ -25,7 +25,7 @@ export function PageTemplate({ title, description, badge, type = "general", chil
       <main className="flex-1">
         {/* 3D Hero Section */}
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-linear-to-b from-background to-secondary/20">
-           <div className="absolute inset-0 z-0 opacity-50">
+           <div className="absolute inset-0 bg-linear-to-r from-background via-transparent to-background z-10">
               <Scene className="w-full h-full">
                  {type === 'city' ? <ScrollCityHero /> : 
                   (type === 'tech' || type === 'grid') ? <NetworkGrid /> : <GlowingOrb />}
@@ -43,7 +43,7 @@ export function PageTemplate({ title, description, badge, type = "general", chil
                       {badge}
                     </span>
                   )}
-                  <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/70">
+                  <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 bg-clip-text text-transparent bg-linear-to-r from-foreground to-foreground/70">
                     {title}
                   </h1>
                   <p className="text-xl text-muted-foreground max-w-2xl mx-auto backdrop-blur-sm bg-background/30 p-4 rounded-xl">

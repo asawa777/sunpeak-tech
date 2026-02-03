@@ -70,7 +70,8 @@
     "privacy_policy": "Privacy Policy",
     "terms_conditions": "Terms & Conditions",
     "cookie_policy": "Cookie Policy",
-    "compliance_cert": "Compliance & Certifications"
+    "compliance_cert": "Compliance & Certifications",
+    "legal_compliance": "Legal & Compliance"
   },
   "hero": {
     "badge": "🚀 Innovating the Future of IT",
@@ -739,7 +740,8 @@
       "challenge": "A leading regional bank faced increasing ransomware attacks and needed a zero-trust architecture overhaul without disrupting daily operations.",
       "solution": "We deployed a comprehensive SOC, implemented micro-segmentation, and upgraded identity management systems across 500+ branches.",
       "result": "Zero successful breaches in the 24 months post-implementation, with a 40% reduction in security operational costs.",
-      "techStack": ["Palo Alto Networks", "Splunk", "CrowdStrike", "Okta"]
+      "techStack": ["Palo Alto Networks", "Splunk", "CrowdStrike", "Okta"],
+      "scene": "tech"
     },
     "telecom-infrastructure": {
       "title": "Telecom Infrastructure Projects",
@@ -749,7 +751,8 @@
       "challenge": "Extend high-speed internet access to 50 remote villages in Northern Thailand within a strict 6-month government mandate.",
       "solution": "Designed a hybrid network using optical ground wire (OPGW) and high-capacity microwave links to traverse difficult mountainous terrain.",
       "result": "Successfully connected 15,000 households and 20 schools to gigabit internet ahead of schedule.",
-      "techStack": ["Optical Fiber", "Microwave Backhaul", "FTTx", "Solar Power Systems"]
+      "techStack": ["Optical Fiber", "Microwave Backhaul", "FTTx", "Solar Power Systems"],
+      "scene": "tech"
     }
   },
   "newsContent": {
@@ -875,7 +878,13 @@
         "title": "Request a Consultation",
         "description": "Schedule a free exploratory session with our solution architects.",
         "badge": "Consultation",
-        "overview": "Tell us about your project. We'll match you with a specialist who understands your industry, not a salesperson.",
+        "overview": "Ready to transform your business? Tell us about your project, and we will match you with a specialist who understands your industry. No sales scripts, just engineering solutions. We look forward to collaborating with you.",
+        "details": [
+           { "label": "Direct Line", "value": "+66 2 123 4567", "type": "phone" },
+           { "label": "Email", "value": "consult@sunpeak.tech", "type": "email" },
+           { "label": "Response Time", "value": "Within 24 Hours", "type": "clock" }
+        ],
+        "scene": "orb",
         "consultationTypes": [
           "IT & Digital Solutions",
           "System & Software Integration",
@@ -883,7 +892,21 @@
           "Telecom & Infrastructure",
           "Construction & Smart Building"
         ],
-        "formNote": "Your information is kept strictly confidential. We do not share data with third parties."
+        "formNote": "Your information is kept strictly confidential. We do not share data with third parties.",
+        "locations": [
+           { 
+             "city": "Bangkok", 
+             "country": "Thailand", 
+             "address": "123 Tech Tower, Sukhumvit Road, Watthana, Bangkok 10110",
+             "map": "bangkok-map-placeholder" 
+           },
+           { 
+             "city": "Chiang Mai", 
+             "country": "Thailand", 
+             "address": "89 Nimmanahaeminda Road, Suthep, Mueang Chiang Mai, 50200",
+             "map": "chiangmai-map-placeholder" 
+           }
+        ]
       },
       "partner-with-us": {
         "title": "Partner with Us",

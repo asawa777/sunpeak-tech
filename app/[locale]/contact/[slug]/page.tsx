@@ -31,7 +31,7 @@ export default async function ContactSubPage({ params }: PageProps) {
   const t = await getTranslations({ locale });
   const tContact = await getTranslations({ locale, namespace: 'contactContent' });
 
-  let content: any = null
+  let content: any = null;
   try {
      content = tContact.raw(slug)
   } catch (e) {
@@ -98,7 +98,7 @@ export default async function ContactSubPage({ params }: PageProps) {
                {content.locations.map((loc: any, i: number) => (
                   <div key={i} className="bg-card border border-border rounded-2xl overflow-hidden">
                      <div className="h-64 bg-secondary/20 flex items-center justify-center relative">
-                        <div className="absolute inset-0 bg-grid-slate-200/50 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+                        <div className="absolute inset-0 bg-grid-slate-200/50 mask-[linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
                         <div className="text-muted-foreground font-mono text-sm flex items-center gap-2">
                            <MapPin className="h-4 w-4" /> Map Placeholder: {loc.city}, {loc.country}
                         </div>
