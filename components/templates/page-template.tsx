@@ -12,7 +12,7 @@ interface PageTemplateProps {
   title: string
   description?: string
   badge?: string
-  type?: "general" | "tech" | "security"
+  type?: "general" | "tech" | "security" | "grid" | "orb" | "city"
   content?: string
   children?: React.ReactNode
 }
@@ -26,7 +26,7 @@ export function PageTemplate({ title, description, badge, type = "general", chil
         <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-background to-secondary/20">
            <div className="absolute inset-0 z-0 opacity-50">
               <Scene className="w-full h-full">
-                 {type === 'tech' ? <NetworkGrid /> : <GlowingOrb />}
+                 {(type === 'tech' || type === 'grid') ? <NetworkGrid /> : <GlowingOrb />}
               </Scene>
            </div>
            

@@ -8,10 +8,12 @@ import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
+import { useTranslations } from "next-intl"
 
 import LanguageSwitch from "@/components/layout/LanguageSwitcher"
 
 export function Header() {
+  const t = useTranslations()
   const [isOpen, setIsOpen] = React.useState(false)
   const pathname = usePathname()
   const [scrolled, setScrolled] = React.useState(false)
@@ -52,7 +54,7 @@ export function Header() {
                     pathname === item.href ? "text-primary" : "text-muted-foreground"
                   )}
                 >
-                  {item.title}
+                  {t(item.title)}
                   {item.items && <ChevronDown className="h-3 w-3 opacity-50" />}
                 </Link>
                 
@@ -65,7 +67,7 @@ export function Header() {
                                 href={subItem.href}
                                 className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
                            >
-                               {subItem.title}
+                               {t(subItem.title)}
                            </Link>
                         ))}
                       </div>
@@ -78,10 +80,10 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4">
              <LanguageSwitch />
              <Button variant="ghost" size="sm" asChild>
-                <Link href="/contact/support">Support</Link>
+                <Link href="/contact/support">{t('nav.support')}</Link>
              </Button>
             <Button variant="gradient" size="sm" asChild>
-              <a href="tel:0969199797">Get a Quote</a>
+              <a href="tel:0969199797">{t('nav.get_quote')}</a>
             </Button>
           </div>
 
@@ -112,7 +114,7 @@ export function Header() {
                     onClick={() => setIsOpen(false)}
                     className="block text-lg font-medium text-foreground"
                   >
-                    {item.title}
+                    {t(item.title)}
                   </Link>
                   {item.items && (
                     <div className="pl-4 space-y-2 border-l-2 border-muted">
@@ -123,7 +125,7 @@ export function Header() {
                           onClick={() => setIsOpen(false)}
                           className="block text-sm text-muted-foreground hover:text-primary"
                         >
-                          {subItem.title}
+                          {t(subItem.title)}
                         </Link>
                       ))}
                     </div>
@@ -135,10 +137,10 @@ export function Header() {
                       <LanguageSwitch />
                   </div>
                   <Button className="w-full" variant="ghost" asChild>
-                     <Link href="/contact/support">Support</Link>
+                     <Link href="/contact/support">{t('nav.support')}</Link>
                   </Button>
                    <Button className="w-full" variant="gradient" asChild>
-                      <a href="tel:0969199797">Get a Quote</a>
+                      <a href="tel:0969199797">{t('nav.get_quote')}</a>
                    </Button>
                </div>
             </div>

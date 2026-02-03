@@ -1,8 +1,764 @@
 {
+  "nav": {
+    "about": "About Us",
+    "company_overview": "Company Overview",
+    "vision_mission": "Vision & Mission",
+    "certifications_standards": "Certifications & Standards",
+    "management_team": "Management & Team",
+    "partners": "Partners & Alliances",
+    "solutions": "Solutions & Products",
+    "information_technology": "Information Technology",
+    "app_database": "Application & Database Systems",
+    "data_center": "Data Center & Disaster Recovery",
+    "noc_soc": "NOC & SOC Operations",
+    "av_systems": "Audio-Visual Systems",
+    "it_support": "IT Support & Maintenance",
+    "asset_mgmt": "Asset Management",
+    "hardware_dist": "IT Hardware Distribution",
+    "software_programs": "Software & Programs",
+    "asset_sys": "Asset Management System",
+    "booking_sys": "Booking & Resource Management System",
+    "feedback_sys": "Service & Feedback System",
+    "telecom_comm": "Telecom & Communication",
+    "comm_network": "Communication & Network Systems",
+    "optical_fiber": "Optical Fiber Infrastructure",
+    "eng_design": "Engineering & Detail Design",
+    "cyber_security": "Cyber Security",
+    "ism_compliance": "Information Security Management & Compliance",
+    "software_sec": "Software Security",
+    "research_training": "Research & Training",
+    "research_academic": "Research & Academic Services",
+    "training_seminars": "Training & Seminars",
+    "construction_interior": "Construction & Interior Decoration",
+    "smart_building": "Smart Building & Automation",
+    "building_renovation": "Building Construction & Renovation",
+    "mep_systems": "MEP Systems (Electrical, Mechanical & Utilities)",
+    "industries": "Industries",
+    "govt_public": "Government & Public Sector",
+    "education": "Education",
+    "healthcare": "Healthcare",
+    "manufacturing": "Manufacturing & Industrial",
+    "enterprise": "Enterprise & Corporate",
+    "smart_city_infra": "Smart City & Infrastructure",
+    "projects": "Projects",
+    "featured_projects": "Featured Projects",
+    "it_digital_projects": "IT & Digital Solutions",
+    "telecom_projects": "Telecom & Infrastructure",
+    "cyber_projects": "Cyber Security",
+    "construction_projects": "Construction & Smart Building",
+    "services": "Professional Services",
+    "consulting": "Consulting & Assessment",
+    "system_design_eng": "System Design & Engineering",
+    "implementation": "Implementation & Integration",
+    "managed_services": "Operations & Managed Services",
+    "maintenance": "Maintenance & Support",
+    "innovation": "Innovation & R&D",
+    "research_initiatives": "Research Initiatives",
+    "tech_labs": "Technology Labs",
+    "academic_collab": "Academic Collaboration",
+    "publications": "Publications & Insights",
+    "news": "News & Resources",
+    "articles": "Articles & Insights",
+    "faqs": "FAQs",
+    "careers": "Careers",
+    "why_work_with_us": "Why Work With Us",
+    "contact": "Contact Us",
+    "partner_with_us": "Partner with Us",
+    "get_quote": "Get a Quote",
+    "support": "Support",
+    "privacy_policy": "Privacy Policy",
+    "terms_conditions": "Terms & Conditions",
+    "cookie_policy": "Cookie Policy",
+    "compliance_cert": "Compliance & Certifications"
+  },
   "hero": {
+    "badge": "🚀 Innovating the Future of IT",
     "title": "Digital Infrastructure for a Securely Connected Nation",
     "subtitle": "Sunpeak Tech delivers enterprise-grade technology for government, telecom, and mission-critical systems",
     "ctaPrimary": "Explore Solutions",
     "ctaSecondary": "Talk to an Expert"
+  },
+  "servicesGrid": {
+    "sectionTitle": "Comprehensive IT Services",
+    "sectionSubtitle": "End-to-end technology solutions designed to scale with your business needs.",
+    "items": {
+      "it_infra": {
+        "title": "IT Infrastructure",
+        "description": "Robust network systems, data centers, and disaster recovery solutions."
+      },
+      "cyber_security": {
+        "title": "Cyber Security",
+        "description": "Comprehensive security assessments, SOC monitoring, and ISO compliance."
+      },
+      "software": {
+        "title": "Software Engineering",
+        "description": "Custom web applications, system design, and database management."
+      },
+      "smart_systems": {
+        "title": "Smart Systems",
+        "description": "Automation, audio-visual integration, and smart building technologies."
+      },
+      "managed_services": {
+        "title": "Managed Services",
+        "description": "24/7 IT support, system maintenance, and on-site assistance."
+      },
+      "training": {
+        "title": "Training & Education",
+        "description": "Professional workshops, seminars, and academic research collaboration."
+      }
+    },
+    "learn_more": "Learn more"
+  },
+  "newServices": {
+      "application-database-systems": {
+          "title": "Application & Database Systems",
+          "description": "High-performance database architectures and custom application development.",
+          "badge": "IT Systems",
+          "overview": "We design and implement robust database systems and scalable applications tailored to enterprise needs. Our solutions ensure data integrity, high availability, and seamless performance under heavy loads.",
+          "features": {
+             "0": { "title": "Database Optimization", "desc": "Performance tuning for SQL and NoSQL databases." },
+             "1": { "title": "Custom App Development", "desc": "Enterprise-grade web and mobile applications." },
+             "2": { "title": "Data Migration", "desc": "Secure and efficient transfer of legacy data." }
+          },
+          "technicalSpecs": ["Oracle/PostgreSQL", "Microservices", "High Availability Clusters"]
+      },
+      "data-center-disaster-recovery": {
+          "title": "Data Center & Disaster Recovery",
+          "description": "Resilient infrastructure to keep your business running, no matter what.",
+          "badge": "Infrastructure",
+          "overview": "From Tier III/IV data center design to comprehensive business continuity planning, we ensure your critical infrastructure is protected against downtime and data loss.",
+          "features": {
+              "0": { "title": "DC Design & Build", "desc": "Energy-efficient and scalable facilities." },
+              "1": { "title": "DRaaS", "desc": "Disaster Recovery as a Service." },
+              "2": { "title": "Backup Solutions", "desc": "Automated, immutable backups." }
+          },
+          "technicalSpecs": ["Tier III/IV Standards", "RTO/RPO Optimization", "Geo-Redundancy"]
+      },
+      "noc-soc-operations": {
+          "title": "NOC & SOC Operations",
+          "description": "24/7 Monitoring and Security Operations Center.",
+          "badge": "Operations",
+          "overview": "Our state-of-the-art Network Operations Center (NOC) and Security Operations Center (SOC) provide round-the-clock surveillance of your digital assets, ensuring rapid response to incidents.",
+          "features": {
+              "0": { "title": "24/7 Monitoring", "desc": "Real-time health checks of network and servers." },
+              "1": { "title": "Threat Intelligence", "desc": "Proactive detection of cyber threats." },
+              "2": { "title": "Incident Response", "desc": "Rapid remediation of operational issues." }
+          },
+          "technicalSpecs": ["SIEM Integration", "Tier 1/2/3 Support", "Real-time Dashboards"]
+      },
+      "audio-visual-systems": {
+          "title": "Audio-Visual Systems",
+          "description": "Immersive AV solutions for conference rooms, auditoriums, and smart buildings.",
+          "badge": "Multimedia",
+          "overview": "We integrate cutting-edge audio and visual technologies to create collaborative environments. From video conferencing suites to large-scale digital signage.",
+          "features": {
+              "0": { "title": "Conference Systems", "desc": "Unified communications equipment." },
+              "1": { "title": "Digital Signage", "desc": "Centrally managed display networks." },
+              "2": { "title": "Smart Control", "desc": "Tablet-based room automation." }
+          },
+          "technicalSpecs": ["4K/8K Distribution", "Dante Audio", "Wireless Presentation"]
+      },
+      "it-support-maintenance": {
+          "title": "IT Support & Maintenance",
+          "description": "Reliable helpdesk & on-site support to keep your workforce productive.",
+          "badge": "Support",
+          "overview": "Our dedicated support teams provide rapid resolution to hardware and software issues. We offer SLA-backed maintenance contracts for guaranteed peace of mind.",
+          "features": {
+              "0": { "title": "Helpdesk Services", "desc": "Remote troubleshooting and user support." },
+              "1": { "title": "On-Site Support", "desc": "Hardware repair and detailed diagnostics." },
+              "2": { "title": "Preventive Maintenance", "desc": "Scheduled checkups to prevent failures." }
+          },
+          "technicalSpecs": ["ITIL Aligned", "SLA Guarantees", "Asset Lifecycle Mgmt"]
+      },
+      "asset-management": {
+          "title": "Asset Management",
+          "description": "Complete lifecycle tracking of your IT hardware and software assets.",
+          "badge": "Management",
+          "overview": "Gain visibility and control over your IT inventory. We implement systems to track procurement, assignment, maintenance, and disposal of assets.",
+          "features": {
+              "0": { "title": "Inventory Tracking", "desc": "Barcode/RFID based asset tagging." },
+              "1": { "title": "License Compliance", "desc": "Software license audit and management." },
+              "2": { "title": "Procurement Integration", "desc": "Streamlined purchasing workflows." }
+          },
+          "technicalSpecs": ["RFID/QR Code", "Depreciation Calculation", "Auto-Discovery"]
+      },
+       "it-hardware-distribution": {
+          "title": "IT Hardware Distribution",
+          "description": "Supply of enterprise-grade servers, storage, networking gear, and workstations.",
+          "badge": "Sales",
+          "overview": "As an authorized partner of major global vendors, we supply genuine hardware with full warranty support and competitive pricing.",
+          "features": {
+              "0": { "title": "Enterprise Servers", "desc": "Rack, tower, and blade servers." },
+              "1": { "title": "Networking Gear", "desc": "Switches, routers, and firewalls." },
+              "2": { "title": "End-User Devices", "desc": "Laptops, desktops, and peripherals." }
+          },
+          "technicalSpecs": ["Authorized Reseller", "Warranty Support", "Volume Licensing"]
+      },
+      "communication-network-systems": {
+          "title": "Communication & Network Systems",
+          "description": "Advanced networking infrastructure designing and implementation.",
+          "badge": "Telecom",
+          "overview": "We build the nervous system of modern organizations. Our network solutions deliver high bandwidth, low latency, and rock-solid reliability.",
+          "features": {
+              "0": { "title": "LAN/WAN Design", "desc": "Campus-wide network architecture." },
+              "1": { "title": "SD-WAN", "desc": "Software-defined wide area networking." },
+              "2": { "title": "Wireless Solutions", "desc": "High-density Wi-Fi 6/7 deployments." }
+          },
+          "technicalSpecs": ["Cisco/Aruba/Huawei", "Network Security", "QoS Optimization"]
+      },
+       "optical-fiber-infrastructure": {
+          "title": "Optical Fiber Infrastructure",
+          "description": "High-speed FTTx and backbone fiber optic cabling solutions.",
+          "badge": "Connectivity",
+          "overview": "Delivering light-speed connectivity. We specialize in outside plant (OSP) and inside plant (ISP) fiber optic installation, testing, and certification.",
+          "features": {
+              "0": { "title": "FTTx Deployment", "desc": "Fiber to the Home/Building/Node." },
+              "1": { "title": "Splicing & Testing", "desc": "OTDR testing and fusion splicing." },
+              "2": { "title": "Cable Management", "desc": "High-density distribution frames." }
+          },
+          "technicalSpecs": ["Single/Multi-Mode", "OTDR Certification", "Underground/Aerial"]
+      },
+      "civil-engineering-telecom": {
+          "title": "Engineering & Detail Design",
+          "description": "Network planning and civil work design for telecom infrastructure.",
+          "badge": "Engineering",
+          "overview": "Detailed engineering services for telecom towers, underground ducts, and network topology planning.",
+          "features": {
+              "0": { "title": "Route Planning", "desc": "GIS-based network route surveys." },
+              "1": { "title": "Civil Works Design", "desc": "Duct banks and manhole design." },
+              "2": { "title": "Permitting", "desc": "Regulatory compliance and ROW acquisition." }
+          },
+          "technicalSpecs": ["AutoCAD/GIS", "Site Surveys", "Structural Analysis"]
+      },
+      "information-security-management-compliance": {
+          "title": "InfoSec Management & Compliance",
+          "description": "Strategic consulting for ISO 27001 and PDPA compliance.",
+          "badge": "Compliance",
+          "overview": "We help organizations navigate the complex landscape of cybersecurity regulations. Prepare for audits and secure your data governance framework.",
+          "features": {
+              "0": { "title": "ISO 27001 Consult", "desc": "Gap analysis and implementation." },
+              "1": { "title": "PDPA/GDPR", "desc": "Data privacy impact assessments." },
+              "2": { "title": "Security Audits", "desc": "Internal and third-party assessments." }
+          },
+          "technicalSpecs": ["ISO 27001 LA", "CISA Certified", "Risk Assessment"]
+      },
+       "software-security": {
+          "title": "Software Security",
+          "description": "Securing applications through DevSecOps and code analysis.",
+          "badge": "AppSec",
+          "overview": "Integrate security into your development lifecycle. We identify vulnerabilities in code before they become exploits.",
+          "features": {
+              "0": { "title": "SAST/DAST", "desc": "Static and Dynamic application security testing." },
+              "1": { "title": "Secure Coding", "desc": "Developer training and guidelines." },
+              "2": { "title": "Penetration Testing", "desc": "Web and mobile app ethical hacking." }
+          },
+          "technicalSpecs": ["OWASP Top 10", "Code Review", "Vulnerability Scanning"]
+      },
+      "smart-building-automation": {
+          "title": "Smart Building & Automation",
+          "description": "Intelligent building management systems (BMS) for energy efficiency and comfort.",
+          "badge": "Smart City",
+          "overview": "Transform buildings into intelligent environments that respond to occupants. Integrate HVAC, lighting, and security into a unified platform.",
+          "features": {
+              "0": { "title": "BMS Integration", "desc": "Centralized facility control." },
+              "1": { "title": "Energy Management", "desc": "Optimization of power consumption." },
+              "2": { "title": "Access Control", "desc": "Smart entry and visitor management." }
+          },
+          "technicalSpecs": ["BACnet/Modbus", "IoT Sensors", "Cloud Analytics"]
+      }, 
+      "research-academic-services": {
+         "title": "Research & Academic Services",
+         "description": "Collaborative research and technology transfer for educational institutions.",
+         "badge": "Academia",
+         "overview": "Bridging the gap between industry and academia. We partner with universities to develop cutting-edge technologies and curriculum.",
+         "features": {
+             "0": { "title": "Joint Research", "desc": "Industry-sponsored R&D projects." },
+             "1": { "title": "Curriculum Dev", "desc": "Aligning education with market needs." },
+             "2": { "title": "Tech Transfer", "desc": "Commercialization of academic innovations." }
+         },
+         "technicalSpecs": ["Grant Management", "IP Protection", "Lab Setup"]
+      }
+
+  },
+  "servicesPage": {
+    "title": "Our Services",
+    "description": "We offer a comprehensive suite of IT solutions to drive your digital transformation.",
+    "badge": "Expertise"
+  },
+  "aboutPage": {
+    "title": "About Sunpeak Tech",
+    "description": "Leading the way in IT infrastructure, security, and smart systems.",
+    "badge": "Our Story",
+    "content": {
+      "p1": "Sunpeak Tech was founded with a mission to bridge the gap between complex technology and business efficiency. We believe technology should be an enabler, not a hurdle.",
+      "p2": "Our team of certified experts brings decades of experience in Network Systems, Cyber Security, and Software Engineering. We partner with industry leaders to deliver enterprise-grade solutions to businesses of all sizes.",
+      "p3": "From modernizing data centers to securing critical assets and enabling smart building automation, our comprehensive portfolio ensures that we are the only technology partner you will ever need."
+    },
+    "company-overview": {
+      "title": "Company Overview",
+      "description": "Sunpeak Tech is a leading provider of innovative IT solutions, dedicated to empowering businesses through cutting-edge technology and exceptional service.",
+      "badge": "Who We Are",
+      "content": "<p>Founded with a vision to bridge the gap between complex technology and business needs, Sunpeak Tech has grown into a trusted partner for organizations across various industries. Our expertise spans from robust IT infrastructure to advanced cyber security and custom software development.</p><p>With a commitment to excellence and a passion for innovation, we deliver solutions that not only solve today's challenges but also pave the way for future growth.</p>",
+      "stats": [
+        { "label": "Years Experience", "value": "15+" },
+        { "label": "Projects Completed", "value": "500+" },
+        { "label": "Expert Consultants", "value": "50+" },
+        { "label": "Clients Globally", "value": "200+" }
+      ]
+    },
+    "vision-mission": {
+      "title": "Vision & Mission",
+      "description": "Our guiding principles drive every decision we make and every project we undertake.",
+      "badge": "Our Core",
+      "content": "<div class=\"grid grid-cols-1 md:grid-cols-2 gap-8 my-12\"><div class=\"p-8 bg-primary/5 rounded-2xl border border-primary/10\"><h3 class=\"text-2xl font-bold mb-4\">Our Vision</h3><p class=\"text-muted-foreground italic\">\"To be the global leader in digital transformation, recognized for our commitment to innovation, integrity, and client success.\"</p></div><div class=\"p-8 bg-secondary/5 rounded-2xl border border-secondary/10\"><h3 class=\"text-2xl font-bold mb-4\">Our Mission</h3><p class=\"text-muted-foreground\">\"To empower organizations with sustainable and secure technology solutions that drive efficiency, foster innovation, and create lasting value.\"</p></div></div><div><h3 class=\"text-2xl font-bold mb-6\">Our Core Values</h3><ul class=\"grid grid-cols-1 md:grid-cols-3 gap-6\"><li><strong>Innovation:</strong> Constantly pushing boundaries.</li><li><strong>Integrity:</strong> Unwavering ethical standards.</li><li><strong>Excellence:</strong> Delivering the highest quality.</li><li><strong>Collaboration:</strong> Success through partnership.</li><li><strong>Agility:</strong> Adapting to a changing world.</li><li><strong>Security:</strong> Protecting what matters most.</li></ul></div>"
+    },
+    "management-team": {
+      "title": "Management & Team",
+      "description": "Meet the visionary leaders and expert professionals who power Sunpeak Tech.",
+      "badge": "Our People",
+      "team": [
+        { "name": "John Smith", "role": "Chief Executive Officer", "bio": "20+ years in IT leadership and digital transformation." },
+        { "name": "Sarah Chen", "role": "Chief Technology Officer", "bio": "Expert in cloud architecture and emerging technologies." },
+        { "name": "Michael Rodriguez", "role": "Head of Cyber Security", "bio": "Specialist in enterprise threat management and compliance." },
+        { "name": "Emily Wong", "role": "Director of Software Engineering", "bio": "Leading our global software development initiatives." }
+      ]
+    },
+    "certifications-standards": {
+      "title": "Certifications & Standards",
+      "description": "We adhere to the highest international standards to ensure quality, security, and reliability in everything we do.",
+      "badge": "Quality Assurance",
+      "certs": [
+        { "title": "ISO 27001", "description": "Information Security Management System" },
+        { "title": "ISO 9001", "description": "Quality Management System" },
+        { "title": "SOC 2 Type II", "description": "Security, Availability, and Confidentiality" },
+        { "title": "NIST Compliance", "description": "Cybersecurity Framework Implementation" }
+      ]
+    },
+    "partners-alliances": {
+      "title": "Partners & Alliances",
+      "description": "We collaborate with global technology leaders to deliver the best-in-breed solutions to our clients.",
+      "badge": "Our Network",
+      "partners": [
+        { "name": "Microsoft", "tier": "Gold Partner" },
+        { "name": "AWS", "tier": "Advanced Consulting Partner" },
+        { "name": "Cisco", "tier": "Premier Integrator" },
+        { "name": "Fortinet", "tier": "Authorized Partner" },
+        { "name": "Oracle", "tier": "Platinum Partner" }
+      ]
+    }
+  },
+  "contactPage": {
+    "title": "Contact Us",
+    "description": "Connect with our team for inquiries, support, or partnership opportunities.",
+    "badge": "Get in Touch",
+    "hero": {
+      "title": "Let's Build the Future Together",
+      "subtitle": "Ready to transform your infrastructure? Our team is standing by to assist you.",
+      "actions": {
+        "consult": "Request Consultation",
+        "email": "Email Us"
+      }
+    },
+    "grid": {
+      "info": { "title": "Contact Information", "description": "Direct lines for support, sales, and general inquiries via email and phone." },
+      "consult": { "title": "Request Consultation", "description": "Schedule a free exploratory session with our solution architects." },
+      "partner": { "title": "Partner with Us", "description": "Joint ventures and strategic alliances for technology vendors." },
+      "office": { "title": "Office Locations", "description": "Visit our headquarters in Bangkok, Thailand." }
+    },
+    "trust": "Trusted by Enterprise Clients across Thailand"
+  },
+  "industriesContent": {
+      "government-public-sector": {
+          "title": "Government & Public Sector",
+          "description": "Secure, transparent, and efficient digital solutions for modern governance.",
+          "badge": "Public Sector",
+          "overview": "We empower government agencies with secure infrastructure, smart city technologies, and digital citizen services. Our solutions meet strict compliance standards and enable data-driven policymaking.",
+          "challenges": [
+              { "title": "Cyber Security", "desc": "Protecting national data assets against state-sponsored threats." },
+              { "title": "Legacy Modernization", "desc": "Migrating aging systems to cloud-native architectures." },
+              { "title": "Citizen Engagement", "desc": "Improving access to digital public services." }
+          ],
+          "solutions": ["National Data Centers", "Smart ID Systems", "E-Government Portals"]
+      },
+      "education": {
+          "title": "Education",
+          "description": "Transforming learning environments with smart campus technologies.",
+          "badge": "EdTech",
+          "overview": "From K-12 to universities, we provide the digital backbone for remote learning, campus security, and administrative efficiency. Enable the classroom of the future today.",
+          "challenges": [
+              { "title": "Hybrid Learning", "desc": "Seamless integration of physical and virtual classrooms." },
+              { "title": "Campus Safety", "desc": "AI-powered surveillance and access control." },
+              { "title": "Digital Equity", "desc": "Ensuring reliable connectivity for all students." }
+          ],
+          "solutions": ["Smart Classrooms", "Learning Management Systems", "Campus Wi-Fi 6"]
+      },
+      "healthcare": {
+          "title": "Healthcare",
+          "description": "Critical infrastructure for patient care and medical data security.",
+          "badge": "HealthTech",
+          "overview": "Reliability is non-negotiable in healthcare. We deliver high-availability networks and secure data platforms that support telemedicine, electronic health records (EHR), and modern hospital operations.",
+          "challenges": [
+              { "title": "Data Privacy", "desc": "Strict adherence to PDPA and healthcare regulations." },
+              { "title": "24/7 Operations", "desc": "Zero-downtime requirements for life-critical systems." },
+              { "title": "IoT Integration", "desc": "Securing connected medical devices." }
+          ],
+          "solutions": ["Hospital Information Systems", "Telemedicine Platforms", "Medical Grade IoT"]
+      },
+      "manufacturing-industrial": {
+          "title": "Manufacturing & Industrial",
+          "description": "Industry 4.0 solutions for smart factories and supply chain optimization.",
+          "badge": "Industry 4.0",
+          "overview": "Drive efficiency through automation and IoT. We connect your production floor to the cloud, enabling predictive maintenance, real-time monitoring, and data-driven logistics.",
+          "challenges": [
+              { "title": "OT/IT Convergence", "desc": "Bridging the gap between operational and information technology." },
+              { "title": "Supply Chain Visibility", "desc": "Real-time tracking of materials and goods." },
+              { "title": "Automation", "desc": "Reducing manual reliance and increasing precision." }
+          ],
+          "solutions": ["Industrial IoT", "Predictive Maintenance", "Smart Warehousing"]
+      },
+      "enterprise-corporate": {
+          "title": "Enterprise & Corporate",
+          "description": "Scalable technology for high-growth businesses and multinationals.",
+          "badge": "Enterprise",
+          "overview": "We help large organizations navigate digital transformation. From cloud migration to unified communications, our solutions drive productivity and competitive advantage.",
+          "challenges": [
+              { "title": "Scalability", "desc": "Infrastructure that grows with your business." },
+              { "title": "Remote Work", "desc": "Secure collaboration tools for distributed teams." },
+              { "title": "Cyber Resilience", "desc": "Robust defense against ransomware and phishing." }
+          ],
+          "solutions": ["SD-WAN", "Unified Communications", "Cloud ERP"]
+      },
+      "smart-city-infrastructure": {
+          "title": "Smart City & Infrastructure",
+          "description": "Building sustainable, connected communities for the future.",
+          "badge": "Smart City",
+          "overview": "We partner with municipalities and developers to create intelligent urban ecosystems. Integrate traffic management, energy grids, and public safety systems into a cohesive whole.",
+          "challenges": [
+              { "title": "Sustainability", "desc": "Reducing energy consumption and carbon footprint." },
+              { "title": "Public Safety", "desc": "Intelligent monitoring and emergency response." },
+              { "title": "Urban Mobility", "desc": "Optimizing traffic flow and public transport." }
+          ],
+          "solutions": ["Intelligent Traffic Systems", "Smart Lighting", "Environmental Monitoring"]
+      }
+  },
+  "legalContent": {
+      "privacy-policy": {
+          "title": "Privacy Policy",
+          "content": "<h1>Privacy Policy</h1><p>Last updated: February 2026</p><p>Sunpeak Tech respects your privacy and is committed to protecting your personal data. This privacy policy will inform you as to how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.</p><h2>1. Information We Collect</h2><p>We may collect, use, store and transfer different kinds of personal data about you which we have grouped together follows: Identity Data, Contact Data, Technical Data, and Usage Data.</p><h2>2. How We Use Your Data</h2><p>We will only use your personal data when the law allows us to. Most commonly, we will use your personal data in the following circumstances: To provide our services, To improve our website, and To comply with a legal or regulatory obligation.</p>"
+      },
+      "terms-conditions": {
+          "title": "Terms & Conditions",
+          "content": "<h1>Terms and Conditions</h1><p>Welcome to Sunpeak Tech. These terms and conditions outline the rules and regulations for the use of Sunpeak Tech's Website.</p><h2>1. Acceptance of Terms</h2><p>By accessing this website we assume you accept these terms and conditions. Do not continue to use Sunpeak Tech if you do not agree to take all of the terms and conditions stated on this page.</p><h2>2. License</h2><p>Unless otherwise stated, Sunpeak Tech and/or its licensors own the intellectual property rights for all material on Sunpeak Tech. All intellectual property rights are reserved.</p>"
+      },
+      "cookie-policy": {
+          "title": "Cookie Policy",
+          "content": "<h1>Cookie Policy</h1><p>This Cookie Policy explains what cookies are and how we use them. You should read this policy so you can understand what type of cookies we use, or the information we collect using cookies and how that information is used.</p><h2>How We Use Cookies</h2><p>We use cookies to improve your experience on our website, including: Keeping you signed in, Understanding how you use our website, and showing you relevant content.</p>"
+      },
+      "compliance-certifications": {
+          "title": "Compliance & Certifications",
+          "content": "<h1>Compliance & Certifications</h1><p>Sunpeak Tech is dedicated to maintaining the highest standards of quality and security.</p><h2>ISO 27001</h2><p>We are certified for Information Security Management, ensuring that your data is handled with the utmost care and security controls.</p><h2>ISO 9001</h2><p>Our Quality Management System Certification demonstrates our commitment to consistent quality and customer satisfaction.</p>"
+      }
+  },
+  "professionalServices": {
+    "landing": {
+      "title": "Professional Services",
+      "description": "Expertise dispatched where you need it most.",
+      "badge": "Expertise",
+      "overview": "We don't just sell products; we solve problems. Our professional services team delivers consulting, implementation, and operational support.",
+      "links": [
+        { "title": "Consulting", "href": "/professional-services/consulting-assessment", "desc": "Strategic technology planning." },
+        { "title": "Implementation", "href": "/professional-services/implementation-integration", "desc": "Deployment and systems integration." },
+        { "title": "Operations", "href": "/professional-services/operations-managed-services", "desc": "Ongoing management and support." }
+      ]
+    },
+    "consulting-assessment": {
+      "title": "Consulting & Assessment",
+      "description": "Strategic guidance for digital transformation.",
+      "badge": "Consulting",
+      "overview": "Our consultants align technology with your business goals. We assess your current infrastructure and design a roadmap for the future.",
+      "features": [
+        { "title": "IT Strategy", "desc": "Long-term technology roadmapping." },
+        { "title": "Security Assessment", "desc": "Vulnerability scanning and risk analysis." },
+        { "title": "Cloud Readiness", "desc": "Evaluation for cloud migration." }
+      ]
+    },
+    "implementation-integration": {
+      "title": "Implementation & Integration",
+      "description": "Seamless deployment of complex systems.",
+      "badge": "Deployment",
+      "overview": "We ensure your new technology is installed correctly and integrates smoothly with your existing environment.",
+      "features": [
+        { "title": "System Deployment", "desc": "Hardware and software installation." },
+        { "title": "API Integration", "desc": "Connecting disparate systems." },
+        { "title": "Data Migration", "desc": "Secure transfer of critical data." }
+      ]
+    },
+    "operations-managed-services": {
+      "title": "Operations & Managed Services",
+      "description": "24/7 support and system management.",
+      "badge": "Operations",
+      "overview": "Let us handle the day-to-day IT operations while you focus on your core business.",
+      "features": [
+        { "title": "Helpdesk Support", "desc": "User support and issue resolution." },
+        { "title": "System Monitoring", "desc": "Real-time health checks." },
+        { "title": "Patch Management", "desc": "Keeping systems secure and up-to-date." }
+      ]
+    },
+    "maintenance-support": {
+      "title": "Maintenance & Support",
+      "description": "Ensuring longevity and performance of your assets.",
+      "badge": "Support",
+      "overview": "Regular maintenance and rapid repair services to minimize downtime and extend hardware life.",
+      "features": [
+        { "title": "Preventive Maintenance", "desc": "Scheduled interactions to prevent failure." },
+        { "title": "On-Site Repair", "desc": "Hardware fix and replacement." },
+        { "title": "SLA Guarantees", "desc": "Committed response times." }
+      ]
+    }
+  },
+  "innovationContent": {
+    "landing": {
+      "title": "Innovation & R&D",
+      "description": "Pioneering the future of resilient technology.",
+      "badge": "Future",
+      "overview": "Our labs are where theory meets application. We invest heavily in research to stay ahead of the curve in quantum security, AI, and smart infrastructure.",
+      "links": [
+        { "title": "Research Initiatives", "href": "/innovation-rnd/research-initiatives", "desc": "Active research programs." },
+        { "title": "Technology Labs", "href": "/innovation-rnd/technology-labs", "desc": "Our experimental facilities." },
+        { "title": "Publications", "href": "/innovation-rnd/publications-insights", "desc": "Whitepapers and technical reports." }
+      ]
+    },
+    "research-initiatives": {
+      "title": "Research Initiatives",
+      "description": "Exploring new frontiers in technology.",
+      "badge": "R&D",
+      "overview": "We are currently focused on Quantum Cryptography, AI for Civic Infrastructure, and Green Energy Computing.",
+      "content": "Our research teams are working on the next generation of secure communication protocols."
+    },
+     "technology-labs": {
+      "title": "Technology Labs",
+      "description": "Where innovation is tested.",
+      "badge": "Labs",
+      "overview": "Our state-of-the-art facilities allow us to prototype and stress-test new solutions before they reach the market.",
+      "content": "From wind tunnels for antenna testing to faraday cages for signal analysis."
+    },
+    "academic-collaboration": {
+      "title": "Academic Collaboration",
+      "description": "Partnering with leading universities.",
+      "badge": "Academia",
+      "overview": "We believe in the power of shared knowledge. Our partnerships with top universities drive breakthrough discoveries.",
+      "content": "Joint programs with NUS, Chulalongkorn, and MIT."
+    },
+    "publications-insights": {
+      "title": "Publications & Insights",
+      "description": "Sharing our findings with the world.",
+      "badge": "Knowledge",
+      "overview": "Read our latest whitepapers and technical reports on emerging trends.",
+      "content": "Download our annual 'State of Cyber Security' report."
+    }
+  },
+  "projectsContent": {
+    "landing": {
+      "title": "Our Projects",
+      "description": "A portfolio of complex engineering challenges solved with precision.",
+      "badge": "Portfolio",
+      "overview": "From government infrastructure to private enterprise systems, our work speaks for itself. Explore our featured case studies below.",
+      "links": [
+        { "title": "Featured Projects", "href": "/projects/featured", "desc": "Highlighting our most impactful work." },
+        { "title": "Government", "href": "/projects/construction-smart-building", "desc": "Public sector infrastructure." },
+        { "title": "Enterprise", "href": "/projects/it-digital-solutions", "desc": "Corporate digital transformation." }
+      ]
+    },
+    "featured": {
+      "title": "Featured Projects",
+      "description": "Our flagship implementations driving global change.",
+      "badge": "Showcase",
+      "overview": "A curated selection of our most ambitious and successful projects.",
+      "content": "Full case studies coming soon."
+    },
+    "construction-smart-building": {
+      "title": "Smart Building & Construction",
+      "description": "Intelligent infrastructure for modern cities.",
+      "badge": "Construction",
+      "overview": "Integrating IoT and BMS systems into the physical fabric of buildings.",
+      "content": "Case Study: The Green Tower - Singapore."
+    },
+    "it-digital-solutions": {
+      "title": "IT & Digital Solutions",
+      "description": "Digital transformation for enterprise scale.",
+      "badge": "Enterprise",
+      "overview": "Cloud migration, cybersecurity overhaul, and custom software development.",
+      "content": "Case Study: FinTech Core Banking Migration."
+    }
+  },
+  "newsContent": {
+    "landing": {
+      "title": "News & Resources",
+      "description": "Insights, updates, and knowledge sharing.",
+      "badge": "Knowledge",
+      "overview": "Stay informed with the latest updates from Sunpeak Tech and deep dives into industry trends.",
+      "links": [
+        { "title": "Latest News", "href": "/news-resources/articles-insights", "desc": "Company announcements." },
+        { "title": "Articles", "href": "/news-resources/articles-insights", "desc": "Technical articles and thought leadership." },
+        { "title": "FAQs", "href": "/news-resources/faqs", "desc": "Common questions answered." }
+      ]
+    },
+    "articles-insights": {
+      "title": "Articles & Insights",
+      "description": "Deep dives into the technology shaping our world.",
+      "badge": "Blog",
+      "overview": "Browse our latest technical articles, case studies, and thought leadership pieces.",
+      "content": "<p>Coming soon: A full library of technical resources.</p>"
+    },
+    "faqs": {
+      "title": "Frequently Asked Questions",
+      "description": "Answers to common queries about our services and approach.",
+      "badge": "FAQ",
+      "overview": "Everything you need to know about working with Sunpeak.",
+      "faqs": [
+        { "question": "Do you work internationally?", "answer": "Yes, we have deployed projects in over 15 countries." },
+        { "question": "What industries do you specialize in?", "answer": "We focus on Smart Cities, Government, Healthcare, and Enterprise IT." },
+        { "question": "How do you handle data privacy?", "answer": "We are ISO 27001 certified and GDPR compliant by default." }
+      ]
+    }
+  },
+  "careersContent": {
+    "landing": {
+      "title": "Careers at Sunpeak Tech",
+      "description": "Join a team where your work matters. We don't just build systems; we build the future of infrastructure.",
+      "badge": "Join Us",
+      "hero": {
+        "title": "Build What Matters.",
+        "subtitle": "We turn complex challenges into enduring solutions. Join a global team of thinkers, makers, and innovators.",
+        "cta": "Explore Opportunities"
+      },
+      "mission": {
+        "title": "Our Philosophy",
+        "content": "We believe in the power of human ingenuity amplified by technology. Our culture is built on respect, continuous learning, and the quiet confidence that comes from deep expertise.",
+        "stats": [
+          { "value": "15+", "label": "Countries" },
+          { "value": "450+", "label": "Engineers" },
+          { "value": "98%", "label": "Retention Rate" }
+        ]
+      },
+      "links": [
+         { "title": "Why Work With Us", "href": "/careers/why-work-with-us", "desc": "Our culture and values." },
+         { "title": "Open Positions", "href": "/careers/open-positions", "desc": "Find your next role." },
+         { "title": "Internships & Training", "href": "/careers/internships-training", "desc": "Early career programs." },
+         { "title": "Life at Sunpeak", "href": "/careers/life-at-company", "desc": "Day-to-day experience." }
+      ]
+    },
+    "pages": {
+      "why-work-with-us": {
+        "title": "Why Work With Us",
+        "description": "Discover a workplace defined by purpose, growth, and stability.",
+        "badge": "Culture",
+        "overview": "You have options. Here's why Sunpeak is different. We focus on long-term stability over short-term hype, and deep mastery over superficial trends.",
+        "pillars": [
+          { "title": "Purpose & Impact", "desc": "Work on critical infrastructure that supports millions of lives daily." },
+          { "title": "Continuous Growth", "desc": "Unlimited access to certification courses, workshops, and mentorship." },
+          { "title": "Global Stability", "desc": "A debt-free, profitable organization with a 20-year roadmap." },
+          { "title": "Human-Centric Tech", "desc": "We use technology to serve people, not the other way around." }
+        ]
+      },
+      "open-positions": {
+        "title": "Open Positions",
+        "description": "Find your next role in Engineering, R&D, and Operations.",
+        "badge": "Jobs",
+        "overview": "We hire based on potential and problem-solving ability, not just keyword matching. Browse our open roles below.",
+        "categories": ["Engineering", "Cybersecurity", "R&D", "Operations", "Design"],
+        "jobs": [
+          { "title": "Senior Systems Architect", "location": "Singapore / Hybrid", "type": "Full-Time", "category": "Engineering" },
+          { "title": "Lead Cyber Defense Analyst", "location": "London, UK", "type": "Full-Time", "category": "Cybersecurity" },
+          { "title": "Quantum Research Fellow", "location": "Tokyo, Japan", "type": "Contract", "category": "R&D" },
+          { "title": "Infrastructure Project Manager", "location": "New York, USA", "type": "Full-Time", "category": "Operations" },
+          { "title": "Frontend Experience Designer", "location": "Remote", "type": "Full-Time", "category": "Design" }
+        ]
+      },
+      "internships-training": {
+        "title": "Internships & Training",
+        "description": "Investing in the next generation of technology leaders.",
+        "badge": "Early Career",
+        "overview": "Our internship program isn't about coffee runs. It's about real code, real systems, and real responsibility, guided by industry veterans.",
+        "programs": [
+          { "title": "Summer Analyst Program", "desc": "A 12-week intensive rotation through our core engineering units." },
+          { "title": "Graduate Leadership Track", "desc": "For recent grads: a 2-year path to management and architectural roles." },
+          { "title": "Research Grants", "desc": "Funding and mentorship for PhD candidates working on relevant topics." }
+        ]
+      },
+      "life-at-company": {
+        "title": "Life at Sunpeak",
+        "description": "More than just a job—a community of curious minds.",
+        "badge": "Life",
+        "overview": "We respect your time outside of work as much as your contribution within it. Balance isn't a perk; it's a prerequisite for sustainable excellence.",
+        "values": [
+          { "title": "Respect for Time", "desc": "No after-hours emails. No weekend crunches. We plan better so you live better." },
+          { "title": "Diverse Perspectives", "desc": "We celebrate the unique background of every team member." },
+          { "title": "Knowledge Sharing", "desc": "Weekly internal tech talks and 'fail-safe' labs to explore new ideas." }
+        ]
+      }
+    },
+    "contactContent": {
+      "contact-information": {
+        "title": "Contact Information",
+        "description": "Reach us directly via phone, email, or visit our headquarters.",
+        "badge": "Direct Contact",
+        "overview": "We are available during Thailand business hours (GMT+7). For urgent technical support, please use our dedicated client portal.",
+        "details": [
+          { "label": "Email", "value": "sunpeaktech.th@gmail.com", "type": "email" },
+          { "label": "Phone", "value": "(+66) 96-919-9797", "type": "phone" },
+          { "label": "Business Hours", "value": "Mon-Fri, 9:00 AM - 6:00 PM (GMT+7)", "type": "text" }
+        ]
+      },
+      "request-a-consultation": {
+        "title": "Request a Consultation",
+        "description": "Schedule a free exploratory session with our solution architects.",
+        "badge": "Consultation",
+        "overview": "Tell us about your project. We'll match you with a specialist who understands your industry, not a salesperson.",
+        "consultationTypes": [
+          "IT & Digital Solutions",
+          "System & Software Integration",
+          "Cybersecurity Assessment",
+          "Telecom & Infrastructure",
+          "Construction & Smart Building"
+        ],
+        "formNote": "Your information is kept strictly confidential. We do not share data with third parties."
+      },
+      "partner-with-us": {
+        "title": "Partner with Us",
+        "description": "Join our ecosystem of technology vendors, integrators, and academic institutions.",
+        "badge": "Partnership",
+        "overview": "We build long-term strategic alliances. We are looking for partners who share our commitment to quality, innovation, and ethical engineering.",
+        "partnerTypes": [
+          { "title": "Technology Vendors", "desc": "Hardware and software providers looking for a certified integration partner." },
+          { "title": "System Integrators", "desc": "Firms seeking specialized expertise in cybersecurity or complex infrastructure." },
+          { "title": "Research Institutes", "desc": "Universities and labs for joint R&D initiatives." }
+        ]
+      },
+      "office-locations": {
+        "title": "Office Locations",
+        "description": "Visit our headquarters in Bangkok, Thailand.",
+        "badge": "Locations",
+        "overview": "Our team is locally grounded in Bangkok to provide rapid on-site support for clients across Thailand and Southeast Asia.",
+        "locations": [
+          { 
+            "city": "Bangkok", 
+            "country": "Thailand", 
+            "address": "123 Tech Tower, Sukhumvit Road, Watthana, Bangkok 10110",
+            "map": "bangkok-map-placeholder" 
+          }
+        ]
+      }
+    }
+  },
+  "footer": {
+    "description": "Empowering businesses with advanced technology solutions. We deliver secure, scalable, and smart infrastructure for the modern enterprise.",
+    "col_services": "Services",
+    "col_company": "Company",
+    "col_contact": "Contact",
+    "address": "Bangkok, Thailand",
+    "rights": "Sunpeak Tech. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
   }
 }

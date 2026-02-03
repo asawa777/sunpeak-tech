@@ -9,153 +9,151 @@ export const siteConfig = {
   description: "Advanced IT Solutions & Services",
   mainNav: [
     {
-      title: "About Us",
+      title: "nav.about",
       href: "/about",
       items: [
-        { title: "Company Overview", href: "/about/company-overview" },
-        { title: "Vision & Mission", href: "/about/vision-mission" },
-        { title: "Management & Team", href: "/about/management-team" },
-        { title: "Certifications & Standards", href: "/about/certifications-standards" },
-        { title: "Partners & Alliances", href: "/about/partners-alliances" },
+        { title: "nav.company_overview", href: "/about/company-overview" },
+        { title: "nav.vision_mission", href: "/about/vision-mission" },
+        { title: "nav.certifications_standards", href: "/about/certifications-standards" },
+        { title: "nav.management_team", href: "/about/management-team" },
+        { title: "nav.partners", href: "/about/partners-alliances" },
       ]
     },
     {
-      title: "Solutions & Products",
+      title: "nav.solutions",
       href: "/solutions",
       items: [
         {
-          title: "Information Technology",
+          title: "nav.information_technology",
           href: "/solutions/information-technology",
           items: [
-             { title: "Application & Database Systems", href: "/solutions/information-technology/application-database-systems" },
-             { title: "Data Center & Disaster Recovery", href: "/solutions/information-technology/data-center-disaster-recovery" },
-             { title: "NOC & SOC Operations", href: "/solutions/information-technology/noc-soc-operations" },
-             { title: "Audio-Visual Systems", href: "/solutions/information-technology/audio-visual-systems" },
-             { title: "IT Support & Maintenance", href: "/solutions/information-technology/it-support-maintenance" },
-             { title: "Asset Management", href: "/solutions/information-technology/asset-management" },
-             { title: "IT Hardware Distribution", href: "/solutions/information-technology/it-hardware-distribution" },
+             { title: "nav.app_database", href: "/solutions/information-technology/application-database-systems" },
+             { title: "nav.data_center", href: "/solutions/information-technology/data-center-disaster-recovery" },
+             { title: "nav.noc_soc", href: "/solutions/information-technology/noc-soc-operations" },
+             { title: "nav.av_systems", href: "/solutions/information-technology/audio-visual-systems" },
+             { title: "nav.it_support", href: "/solutions/information-technology/it-support-maintenance" },
+             { title: "nav.asset_mgmt", href: "/solutions/information-technology/asset-management" },
+             { title: "nav.hardware_dist", href: "/solutions/information-technology/it-hardware-distribution" },
           ]
         },
         {
-          title: "Software & Programs",
+          title: "nav.software_programs",
           href: "/solutions/software-programs",
-           items: [
-             { title: "Asset Management System", href: "/solutions/software-programs/asset-management-system" },
-             { title: "Booking & Resource Management System", href: "/solutions/software-programs/booking-resource-management-system" },
-             { title: "Service & Feedback System", href: "/solutions/software-programs/service-feedback-system" },
-             { title: "Customize Service", href: "/solutions/software-programs/customize-service" },
-           ]
+          items: [
+             { title: "nav.asset_sys", href: "/solutions/software-programs/asset-management-system" },
+             { title: "nav.booking_sys", href: "/solutions/software-programs/booking-resource-management" },
+             { title: "nav.feedback_sys", href: "/solutions/software-programs/service-feedback-system" },
+          ]
         },
         {
-          title: "Telecom & Communication",
+          title: "nav.telecom_comm",
           href: "/solutions/telecom-communication",
+          items: [
+             { title: "nav.comm_network", href: "/solutions/telecom-communication/communication-network-systems" },
+             { title: "nav.optical_fiber", href: "/solutions/telecom-communication/optical-fiber-infrastructure" },
+             { title: "nav.eng_design", href: "/solutions/telecom-communication/engineering-detail-design" },
+          ]
+        },
+        {
+          title: "nav.cyber_security",
+          href: "/solutions/cyber-security",
+          items: [
+             { title: "nav.ism_compliance", href: "/solutions/cyber-security/information-security-management-compliance" },
+             { title: "nav.software_sec", href: "/solutions/cyber-security/software-security" },
+          ]
+        },
+        {
+           title: "nav.research_training",
+           href: "/solutions/research-training",
            items: [
-             { title: "Communication & Network Systems", href: "/solutions/telecom-communication/communication-network-systems" },
-             { title: "Optical Fiber Infrastructure", href: "/solutions/telecom-communication/optical-fiber-infrastructure" },
-             { title: "Engineering & Detail Design", href: "/solutions/telecom-communication/engineering-detail-design" },
+              { title: "nav.research_academic", href: "/solutions/research-training/research-academic-services" },
+              { title: "nav.training_seminars", href: "/solutions/research-training/training-seminars" },
            ]
         },
         {
-          title: "Cyber Security",
-          href: "/solutions/cyber-security",
-           items: [
-             { title: "Information Security Management", href: "/solutions/cyber-security/information-security-management-compliance" },
-             { title: "Software Security", href: "/solutions/cyber-security/software-security" },
-           ]
-        },
-         {
-          title: "Research & Training",
-          href: "/solutions/research-training",
-           items: [
-             { title: "Research & Academic Services", href: "/solutions/research-training/research-academic-services" },
-             { title: "Training & Seminars", href: "/solutions/research-training/training-seminars" },
-           ]
-        },
-         {
-          title: "Construction & Interior",
+          title: "nav.construction_interior",
           href: "/solutions/construction-interior-decoration",
-           items: [
-             { title: "Smart Building & Automation", href: "/solutions/construction-interior-decoration/smart-building-automation" },
-             { title: "Building Construction & Renovation", href: "/solutions/construction-interior-decoration/building-construction-renovation" },
-             { title: "MEP Systems", href: "/solutions/construction-interior-decoration/mep-systems" },
-           ]
+          items: [
+             { title: "nav.smart_building", href: "/solutions/construction-interior-decoration/smart-building-automation" },
+             { title: "nav.building_renovation", href: "/solutions/construction-interior-decoration/building-construction-renovation" },
+             { title: "nav.mep_systems", href: "/solutions/construction-interior-decoration/mep-systems" },
+          ]
         },
       ]
     },
     {
-      title: "Industries",
+      title: "nav.industries",
       href: "/industries",
       items: [
-        { title: "Government & Public Sector", href: "/industries/government-public-sector" },
-        { title: "Education", href: "/industries/education" },
-        { title: "Healthcare", href: "/industries/healthcare" },
-        { title: "Manufacturing & Industrial", href: "/industries/manufacturing-industrial" },
-        { title: "Enterprise & Corporate", href: "/industries/enterprise-corporate" },
-         { title: "Smart City & Infrastructure", href: "/industries/smart-city-infrastructure" },
+        { title: "nav.govt_public", href: "/industries/government-public-sector" },
+        { title: "nav.education", href: "/industries/education" },
+        { title: "nav.healthcare", href: "/industries/healthcare" },
+        { title: "nav.manufacturing", href: "/industries/manufacturing-industrial" },
+        { title: "nav.enterprise", href: "/industries/enterprise-corporate" },
+        { title: "nav.smart_city_infra", href: "/industries/smart-city-infrastructure" },
       ]
     },
     {
-       title: "Projects",
+       title: "nav.projects", // Featured Projects
        href: "/projects",
        items: [
-          { title: "Featured Projects", href: "/projects/featured-projects" },
-          { title: "IT & Digital Solutions", href: "/projects/it-digital-solutions" },
-          { title: "Telecom & Infrastructure", href: "/projects/telecom-infrastructure" },
-          { title: "Cyber Security", href: "/projects/cyber-security" },
-          { title: "Construction & Smart Building", href: "/projects/construction-smart-building" },
+          { title: "nav.featured_projects", href: "/projects/featured" },
+          { title: "nav.it_digital_projects", href: "/projects/it-digital-solutions" },
+          { title: "nav.telecom_projects", href: "/projects/telecom-infrastructure" },
+          { title: "nav.cyber_projects", href: "/projects/cyber-security" },
+          { title: "nav.construction_projects", href: "/projects/construction-smart-building" },
        ]
     },
     {
-       title: "Services",
+       title: "nav.services", // Consulting & Assessment, etc. (Professional Services)
        href: "/professional-services",
        items: [
-          { title: "Consulting & Assessment", href: "/professional-services/consulting-assessment" },
-          { title: "System Design & Engineering", href: "/professional-services/system-design-engineering" },
-          { title: "Implementation & Integration", href: "/professional-services/implementation-integration" },
-           { title: "Operations & Managed Services", href: "/professional-services/operations-managed-services" },
-            { title: "Maintenance & Support", href: "/professional-services/maintenance-support" },
+          { title: "nav.consulting", href: "/professional-services/consulting-assessment" },
+          { title: "nav.system_design_eng", href: "/professional-services/system-design-engineering" },
+          { title: "nav.implementation", href: "/professional-services/implementation-integration" },
+          { title: "nav.managed_services", href: "/professional-services/operations-managed-services" },
+          { title: "nav.maintenance", href: "/professional-services/maintenance-support" },
        ]
     },
     {
-       title: "Innovation",
+       title: "nav.innovation", // Research Initiatives etc
        href: "/innovation-rnd",
-        items: [
-          { title: "Research Initiatives", href: "/innovation-rnd/research-initiatives" },
-          { title: "Technology Labs", href: "/innovation-rnd/technology-labs" },
-          { title: "Academic Collaboration", href: "/innovation-rnd/academic-collaboration" },
-           { title: "Publications & Insights", href: "/innovation-rnd/publications-insights" },
+       items: [
+          { title: "nav.research_initiatives", href: "/innovation-rnd/research-initiatives" },
+          { title: "nav.tech_labs", href: "/innovation-rnd/technology-labs" },
+          { title: "nav.academic_collab", href: "/innovation-rnd/academic-collaboration" },
+          { title: "nav.publications", href: "/innovation-rnd/publications-insights" },
        ]
     },
-     {
-       title: "News",
+    {
+       title: "nav.news", // Articles & Insights
        href: "/news-resources",
-        items: [
-          { title: "News & Announcements", href: "/news-resources/news-announcements" },
-          { title: "Articles & Insights", href: "/news-resources/articles-insights" },
-          { title: "Whitepapers & Downloads", href: "/news-resources/whitepapers-downloads" },
-           { title: "Events & Seminars", href: "/news-resources/events-seminars" },
-            { title: "FAQs", href: "/news-resources/faqs" },
+       items: [
+          { title: "nav.articles", href: "/news-resources/articles-insights" },
+          { title: "nav.faqs", href: "/news-resources/faqs" },
        ]
     },
-     {
-       title: "Careers",
+    {
+       title: "nav.careers", // Why Work With Us
        href: "/careers",
-        items: [
-          { title: "Why Work With Us", href: "/careers/why-work-with-us" },
-          { title: "Open Positions", href: "/careers/open-positions" },
-          { title: "Internship & Training Programs", href: "/careers/internship-training-programs" },
-           { title: "Life at Company", href: "/careers/life-at-company" },
+       items: [
+          { title: "nav.why_work_with_us", href: "/careers/why-work-with-us" },
        ]
     },
-     {
-       title: "Contact",
+    {
+       title: "nav.contact",
        href: "/contact",
-        items: [
-          { title: "Contact Information", href: "/contact/contact-information" },
-          { title: "Request a Consultation", href: "/contact/request-a-consultation" },
-          { title: "Partner with Us", href: "/contact/partner-with-us" },
-           { title: "Office Locations", href: "/contact/office-locations" },
+       items: [
+          { title: "nav.partner_with_us", href: "/contact/partner-with-us" },
        ]
     },
-  ]
+  ],
+  footerNav: {
+     legal: [
+        { title: "nav.privacy_policy", href: "/legal/privacy-policy" },
+        { title: "nav.terms_conditions", href: "/legal/terms-conditions" },
+        { title: "nav.cookie_policy", href: "/legal/cookie-policy" },
+        { title: "nav.compliance_cert", href: "/legal/compliance-certifications" },
+     ]
+  }
 }

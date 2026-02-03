@@ -20,15 +20,16 @@ export function ConsultationForm({ types, note }: ConsultationFormProps) {
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
-      topic: formData.get('topic'),
-      details: formData.get('details')
+      subject: `Consultation Request: ${formData.get('topic')}`,
+      message: formData.get('details')
     }
 
     try {
-      const res = await fetch('/send-mail.php', {
+      const res = await fetch('/contact.php', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
         body: JSON.stringify(data),
       })

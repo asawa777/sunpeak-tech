@@ -1,8 +1,13 @@
+"use client"
+
 import Link from "next/link"
 import { siteConfig } from "@/config/site"
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+  const t = useTranslations()
+  
   return (
     <footer className="bg-muted/30 border-t border-border mt-auto">
       <div className="container mx-auto px-4 md:px-6 py-12 lg:py-16">
@@ -15,7 +20,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-sm">
-              Empowering businesses with advanced technology solutions. We deliver secure, scalable, and smart infrastructure for the modern enterprise.
+              {t('footer.description')}
             </p>
             <div className="flex items-center space-x-4">
               <Link href="#" className="text-muted-foreground hover:text-primary transition-colors hover:scale-110 transform duration-200">
@@ -34,31 +39,31 @@ export function Footer() {
           </div>
 
           <div>
-             <h3 className="font-semibold mb-4">Services</h3>
+             <h3 className="font-semibold mb-4">{t('footer.col_services')}</h3>
              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/services/it-infrastructure" className="hover:text-primary transition-colors">IT Infrastructure</Link></li>
-                <li><Link href="/services/cyber-security" className="hover:text-primary transition-colors">Cyber Security</Link></li>
-                 <li><Link href="/services/software-engineering" className="hover:text-primary transition-colors">Software Engineering</Link></li>
-                 <li><Link href="/services/managed-services" className="hover:text-primary transition-colors">Managed Services</Link></li>
+                <li><Link href="/solutions/information-technology" className="hover:text-primary transition-colors">{t('servicesGrid.items.it_infra.title')}</Link></li>
+                <li><Link href="/solutions/cyber-security" className="hover:text-primary transition-colors">{t('nav.cyber_security')}</Link></li>
+                 <li><Link href="/solutions/software-programs" className="hover:text-primary transition-colors">{t('servicesGrid.items.software.title')}</Link></li>
+                 <li><Link href="/professional-services/operations-managed-services" className="hover:text-primary transition-colors">{t('nav.managed_services')}</Link></li>
              </ul>
           </div>
 
           <div>
-             <h3 className="font-semibold mb-4">Company</h3>
+             <h3 className="font-semibold mb-4">{t('footer.col_company')}</h3>
              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/about/company" className="hover:text-primary transition-colors">About Us</Link></li>
-                <li><Link href="/about/our-team" className="hover:text-primary transition-colors">Our Team</Link></li>
-                <li><Link href="/about/careers" className="hover:text-primary transition-colors">Careers</Link></li>
-                <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+                <li><Link href="/about" className="hover:text-primary transition-colors">{t('nav.about')}</Link></li>
+                <li><Link href="/about/management-team" className="hover:text-primary transition-colors">{t('nav.management_team')}</Link></li>
+                <li><Link href="/careers" className="hover:text-primary transition-colors">{t('nav.careers')}</Link></li>
+                <li><Link href="/contact" className="hover:text-primary transition-colors">{t('nav.contact')}</Link></li>
              </ul>
           </div>
 
           <div>
-            <h3 className="font-semibold mb-4">Contact</h3>
+            <h3 className="font-semibold mb-4">{t('footer.col_contact')}</h3>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" />
-                <span>Bangkok, Thailand</span>
+                <span>{t('footer.address')}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="h-4 w-4 shrink-0" />
@@ -73,10 +78,10 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Sunpeak Tech. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} {t('footer.rights')}</p>
           <div className="flex gap-6">
-            <Link href="/privacy-policy" className="hover:text-foreground transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-foreground transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-foreground transition-colors">{t('footer.privacy')}</Link>
+            <Link href="/terms-of-service" className="hover:text-foreground transition-colors">{t('footer.terms')}</Link>
           </div>
         </div>
       </div>

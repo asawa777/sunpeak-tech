@@ -1,64 +1,103 @@
-import { PageTemplate } from "@/components/templates/page-template"
-import { siteConfig } from "@/config/site"
+import { PageTemplate } from "@/components/templates/page-template";
+import { siteConfig } from "@/config/site";
+import { CheckCircle2, ShieldCheck, TrendingUp, Lightbulb } from "lucide-react";
+import { notFound } from "next/navigation";
+import { getTranslations } from "next-intl/server";
 
 interface PageProps {
   params: Promise<{
-    slug: string
-  }>
-}
-
-function getData(slug: string) {
-  const path = `/industries/${slug}`
-  const section = siteConfig.mainNav.find(n => n.title === "Industries")
-  return section?.items?.find(i => i.href === path)
+    slug: string;
+    locale: string;
+  }>;
 }
 
 export function generateStaticParams() {
-   const section = siteConfig.mainNav.find(n => n.title === "Industries")
-   return section?.items?.map(i => ({ slug: i.href.split('/').pop() })) || []
+  const industriesNav = siteConfig.mainNav.find((n) => n.href === "/industries");
+  if (!industriesNav || !industriesNav.items) return [];
+
+  return industriesNav.items.map((i) => ({
+    slug: i.href.split("/").pop() || "",
+  }));
 }
 
-import { industriesContent } from "@/config/industries-content"
+export async function generateMetadata({ params }: PageProps) {
+  const { slug, locale } = await params;
+  const tIndustries = await getTranslations({ locale, namespace: 'industriesContent' });
+  
+  let content: any;
+  try { content = tIndustries.raw(slug); } catch (e) { return {}; }
+
+  if (!content) return {};
+
+  return {
+    title: `${content.title} | Sunpeak Tech`,
+    description: content.description,
+  };
+}
 
 export default async function IndustryPage({ params }: PageProps) {
-  const { slug } = await params
-  const navData = getData(slug)
-  const content = industriesContent[slug as keyof typeof industriesContent]
+  const { slug, locale } = await params;
+  const t = await getTranslations({ locale });
+  const tIndustries = await getTranslations({ locale, namespace: 'industriesContent' });
 
-  if (!content && !navData) return <PageTemplate title={slug} type="general" />
+  // Verify slug exists in industriesContent
+  let content: any = null;
+  try {
+      content = tIndustries.raw(slug);
+  } catch (error) {
+      return notFound();
+  }
 
-  const title = content?.title || navData?.title || slug
-  const description = content?.description || `Specialized IT solutions for the ${title} sector.`
-  const badge = content?.badge || "Industry Focus"
-  const type = (content?.scene === 'shield' ? 'security' : 'general') as any
+  if (!content) return notFound();
 
   return (
-    <PageTemplate 
-      title={title}
-      description={description}
-      badge={badge}
-      type={type}
+    <PageTemplate
+      title={content.title}
+      description={content.description}
+      badge={content.badge}
+      type="tech"
     >
-      <div className="prose prose-lg dark:prose-invert max-w-none">
-         {content?.features && (
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-12">
-            {content.features.map((feature: string) => (
-               <div key={feature} className="flex items-center p-4 bg-card border border-border rounded-xl shadow-sm">
-                  <div className="h-8 w-8 rounded-full bg-secondary/10 text-secondary-foreground flex items-center justify-center mr-4 font-bold">
-                    🏢
-                  </div>
-                  <span className="font-medium">{feature}</span>
-               </div>
-            ))}
-          </div>
-        )}
+      <div className="container max-w-5xl mx-auto space-y-16">
+        
+        {/* Overview Section */}
+        <div className="prose prose-lg dark:prose-invert max-w-none">
+           <h2 className="text-3xl font-bold mb-6">{t('nav.company_overview')}</h2>
+           <p className="lead text-xl text-muted-foreground">{content.overview}</p>
+        </div>
 
-        {content?.content ? (
-          <div dangerouslySetInnerHTML={{ __html: content.content }} />
-        ) : (
-           <p>Detailed industry insights for {title} coming soon.</p>
-        )}
+        {/* Industry Challenges Grid */}
+        <div>
+            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                <TrendingUp className="h-8 w-8 text-primary" />
+                {locale === 'th' ? "ความท้าทายในอุตสาหกรรม" : "Key Challenges"}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {content.challenges && content.challenges.map((challenge: any, idx: number) => (
+                    <div key={idx} className="p-6 bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="text-lg font-bold mb-3 text-foreground">{challenge.title}</h3>
+                        <p className="text-muted-foreground text-sm">{challenge.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </div>
+
+        {/* Our Solutions Section */}
+        <div className="bg-secondary/5 rounded-3xl p-8 border border-border">
+            <h2 className="text-3xl font-bold mb-8 flex items-center gap-3">
+                <Lightbulb className="h-8 w-8 text-primary" />
+                 {locale === 'th' ? "โซลูชันของเรา" : "Our Solutions"}
+            </h2>
+            <div className="flex flex-wrap gap-4">
+                {content.solutions && content.solutions.map((sol: string, idx: number) => (
+                    <div key={idx} className="flex items-center gap-3 bg-background px-6 py-4 rounded-xl border border-border shadow-sm">
+                        <CheckCircle2 className="h-5 w-5 text-green-500" />
+                        <span className="font-semibold">{sol}</span>
+                    </div>
+                ))}
+            </div>
+        </div>
+
       </div>
     </PageTemplate>
-  )
+  );
 }
