@@ -6,8 +6,11 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { Scene } from "@/components/3d/scene"
 import { ScrollCityHero } from "@/components/3d/scroll-city-hero"
+import { useTranslations } from 'next-intl'
 
 export function Hero() {
+  const t = useTranslations('hero')
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 bg-[#020408]">
       {/* 3D Scroll-Reactive City Scene */}
@@ -32,14 +35,11 @@ export function Hero() {
           </div>
           
           <h1 className="text-5xl md:text-8xl font-bold tracking-tight text-white leading-[1.1] drop-shadow-2xl">
-            Intelligent Solutions for a <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-violet-500 animate-gradient-x p-2">
-              Connected World
-            </span>
+            {t('title')}
           </h1>
 
           <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed drop-shadow-md">
-             We empower enterprises, governments, and industries with next-gen IT infrastructure, cybersecurity, and smart systems.
+             {t('subtitle')}
           </p>
 
           <motion.div 
@@ -50,11 +50,11 @@ export function Hero() {
           >
             <Button size="lg" variant="gradient" className="w-full sm:w-auto text-lg h-14 px-8" asChild>
               <Link href="/services">
-                Explore Our Services <ArrowRight className="ml-2 h-5 w-5" />
+                {t('ctaPrimary')} <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="w-full sm:w-auto text-lg h-14 px-8" asChild>
-              <Link href="/contact">Match with an Expert</Link>
+              <Link href="/contact">{t('ctaSecondary')}</Link>
             </Button>
           </motion.div>
         </motion.div>

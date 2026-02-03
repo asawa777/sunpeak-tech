@@ -9,6 +9,8 @@ import { cn } from "@/lib/utils"
 import { siteConfig } from "@/config/site"
 import { Button } from "@/components/ui/button"
 
+import LanguageSwitch from "@/components/layout/LanguageSwitcher"
+
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false)
   const pathname = usePathname()
@@ -59,11 +61,11 @@ export function Header() {
                       <div className="bg-background/95 backdrop-blur-md rounded-lg shadow-lg border border-border p-2">
                         {item.items.map((subItem) => (
                            <Link
-                              key={subItem.title}
-                              href={subItem.href}
-                              className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
+                                key={subItem.title}
+                                href={subItem.href}
+                                className="block px-3 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-colors"
                            >
-                              {subItem.title}
+                               {subItem.title}
                            </Link>
                         ))}
                       </div>
@@ -74,6 +76,7 @@ export function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
+             <LanguageSwitch />
              <Button variant="ghost" size="sm" asChild>
                 <Link href="/contact/support">Support</Link>
              </Button>
@@ -128,6 +131,9 @@ export function Header() {
                 </div>
               ))}
                <div className="pt-6 space-y-4">
+                  <div className="flex justify-start pb-4">
+                      <LanguageSwitch />
+                  </div>
                   <Button className="w-full" variant="ghost" asChild>
                      <Link href="/contact/support">Support</Link>
                   </Button>
