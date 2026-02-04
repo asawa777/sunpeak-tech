@@ -1,6 +1,6 @@
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { Hero } from "@/components/sections/hero"
+import { HeroGlobe } from "@/components/sections/hero-globe"
 import { ServicesGrid } from "@/components/sections/services-grid"
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <Header />
       <main className="flex-1">
-        <Hero />
+        <HeroGlobe />
         <ServicesGrid />
       </main>
       <Footer />
