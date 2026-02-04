@@ -75,7 +75,7 @@ export function Header() {
                       <Link href="/contact/support">{t('nav.support')}</Link>
                   </Button>
                   <Button size="sm" className="bg-white text-black hover:bg-gray-200 rounded-full px-5 font-medium" asChild>
-                      <Link href="/contact/request-a-consultation">{t('nav.get_quote')}</Link>
+                      <Link href="tel:+66969199797">{t('nav.get_quote')}</Link>
                   </Button>
               </div>
 
@@ -131,7 +131,7 @@ export function Header() {
                                   <Link href="/contact/support">{t('nav.support')}</Link>
                               </Button>
                               <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" asChild>
-                                  <Link href="/contact/request-a-consultation">{t('nav.get_quote')}</Link>
+                                  <Link href="tel:+66969199797">{t('nav.get_quote')}</Link>
                               </Button>
                           </div>
                       </div>
