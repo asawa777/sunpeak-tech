@@ -6,11 +6,11 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 
 const serviceIds = [
-  { id: 'it_infra', icon: Server, href: "/services/it-infrastructure" },
-  { id: 'cyber_security', icon: Shield, href: "/services/cyber-security" },
-  { id: 'software', icon: Code2, href: "/services/software-engineering" },
-  { id: 'smart_systems', icon: Cpu, href: "/services/smart-systems" },
-  { id: 'managed_services', icon: Headphones, href: "/services/managed-services" },
+  { id: 'it_infra', icon: Server, href: "/solutions/information-technology" },
+  { id: 'cyber_security', icon: Shield, href: "/solutions/cyber-security" },
+  { id: 'software', icon: Code2, href: "/solutions/software-programs" },
+  { id: 'smart_systems', icon: Cpu, href: "/solutions/construction-interior-decoration/smart-building-automation" },
+  { id: 'managed_services', icon: Headphones, href: "/professional-services/operations-managed-services" },
   { id: 'training', icon: GraduationCap, href: "/solutions/research-training" },
 ]
 
