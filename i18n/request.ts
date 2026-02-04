@@ -6,7 +6,7 @@ const locales = ['en', 'th'];
  
 export default getRequestConfig(async ({requestLocale}) => {
   let locale = await requestLocale;
-  console.log("I18N Request Locale Resolved:", locale);
+
 
   // Ensure valid locale
   if (!locale || !locales.includes(locale as any)) {

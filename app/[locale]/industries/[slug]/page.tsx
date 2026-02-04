@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site";
 import { CheckCircle2, ShieldCheck, TrendingUp, Lightbulb } from "lucide-react";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import DOMPurify from 'isomorphic-dompurify';
 
 interface PageProps {
   params: Promise<{
@@ -71,7 +72,7 @@ export default async function IndustryPage({ params }: PageProps) {
                   <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: section.content }} />
               </div>
            ))}
-           {content.content && <div dangerouslySetInnerHTML={{ __html: content.content }} />}
+           {content.content && <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content.content) }} />}
         </div>
 
         {/* Industry Challenges Grid */}

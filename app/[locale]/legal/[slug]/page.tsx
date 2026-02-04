@@ -2,6 +2,7 @@ import { PageTemplate } from "@/components/templates/page-template";
 import { siteConfig } from "@/config/site";
 import { notFound } from "next/navigation";
 import { getTranslations } from "next-intl/server";
+import DOMPurify from 'isomorphic-dompurify';
 
 interface PageProps {
   params: Promise<{
@@ -58,7 +59,7 @@ export default async function LegalPage({ params }: PageProps) {
       <div className="container max-w-4xl mx-auto">
         <div 
             className="prose prose-lg dark:prose-invert max-w-none bg-card p-12 rounded-3xl border border-border shadow-sm"
-            dangerouslySetInnerHTML={{ __html: content.content }} 
+            dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content.content) }} 
         />
       </div>
     </PageTemplate>

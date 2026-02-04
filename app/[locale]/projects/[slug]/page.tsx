@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import DOMPurify from 'isomorphic-dompurify';
 import { notFound } from "next/navigation";
 import { PageTemplate } from "@/components/templates/page-template";
 import Link from "next/link";
@@ -80,7 +81,7 @@ export default async function ProjectCaseStudy({ params }: PageProps) {
                            </div>
                         ))}
 
-                        {content.content && <div dangerouslySetInnerHTML={{ __html: content.content }} />}
+                        {content.content && <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content.content) }} />}
                     </div>
                 
                 <div className="space-y-8">

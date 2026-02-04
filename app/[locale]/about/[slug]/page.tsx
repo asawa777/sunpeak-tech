@@ -1,4 +1,5 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import DOMPurify from 'isomorphic-dompurify';
 import { notFound } from 'next/navigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle2 } from 'lucide-react';
@@ -38,7 +39,7 @@ export default async function AboutSubPage({ params }: { params: Promise<{ slug:
     if (slug === 'company-overview') {
         return (
             <div className="grid md:grid-cols-2 gap-12">
-                <div className="prose prose-lg dark:prose-invert" dangerouslySetInnerHTML={{ __html: t.raw(`${slug}.content`) }} />
+                <div className="prose prose-lg dark:prose-invert" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t.raw(`${slug}.content`)) }} />
                 <div className="grid grid-cols-2 gap-6">
                     {t.raw(`${slug}.stats`).map((stat: any, i: number) => (
                         <div key={i} className="p-6 bg-card rounded-xl border text-center">
@@ -53,7 +54,7 @@ export default async function AboutSubPage({ params }: { params: Promise<{ slug:
     
     if (slug === 'vision-mission') {
         return (
-             <div className="prose prose-lg dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: t.raw(`${slug}.content`) }} />
+             <div className="prose prose-lg dark:prose-invert max-w-none" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(t.raw(`${slug}.content`)) }} />
         );
     }
 

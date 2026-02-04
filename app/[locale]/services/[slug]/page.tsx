@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, ArrowRight, Gauge, Shield, Zap } from 'lucide-react';
 import Link from 'next/link';
+import DOMPurify from 'isomorphic-dompurify';
 
 export default function ServicePage({ params }: { params: { slug: string } }) {
   const t = useTranslations('newServices');
@@ -90,7 +91,7 @@ export default function ServicePage({ params }: { params: { slug: string } }) {
                             return rawSections.map((section: any, idx: number) => (
                                 <div key={idx} className="mt-8">
                                     {section.title && <h3 className="text-2xl font-bold mb-4 text-foreground">{section.title}</h3>}
-                                    <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: section.content }} />
+                                    <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(section.content) }} />
                                 </div>
                             ));
                         }

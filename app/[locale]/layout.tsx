@@ -74,7 +74,7 @@ export default async function LocaleLayout({
   try {
      messages = await getMessages();
   } catch (error) {
-    console.error("Message loading error:", error);
+    // console.error("Message loading error:", error);
     notFound();
   }
 

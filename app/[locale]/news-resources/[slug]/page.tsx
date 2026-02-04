@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import DOMPurify from 'isomorphic-dompurify';
 import { notFound } from "next/navigation";
 import { PageTemplate } from "@/components/templates/page-template";
 
@@ -48,7 +49,7 @@ export default async function NewsSubPage({ params }: PageProps) {
             <div className="prose prose-lg dark:prose-invert">
                 {/* Check if content is string or object/array */}
                 {typeof content.content === 'string' ? (
-                   <div dangerouslySetInnerHTML={{ __html: content.content }} />
+                   <div dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(content.content) }} />
                 ) : (
                    <p className="lead text-xl text-muted-foreground">{content.overview}</p>
                 )}

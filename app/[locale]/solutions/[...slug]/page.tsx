@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle2 } from "lucide-react"; // Import CheckCircle2 for features list
 import { notFound } from "next/navigation";
 import { getTranslations, setRequestLocale } from "next-intl/server";
+import DOMPurify from 'isomorphic-dompurify';
 
 interface PageProps {
   params: Promise<{
@@ -137,7 +138,7 @@ export default async function Page({ params }: PageProps) {
                  {serviceContent.sections && serviceContent.sections.map((section: any, idx: number) => (
                     <div key={idx} className="mt-8">
                         {section.title && <h3 className="text-2xl font-bold mb-4 text-foreground">{section.title}</h3>}
-                        <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: section.content }} />
+                        <div className="prose prose-muted dark:prose-invert max-w-none text-muted-foreground" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(section.content) }} />
                     </div>
                  ))}
 
