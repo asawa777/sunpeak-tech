@@ -2,30 +2,29 @@ import * as React from "react"
 import type { VariantProps } from "class-variance-authority"
 import { cva } from "class-variance-authority"
 import { cn } from "@/lib/utils"
-// Import Slot if utilizing asChild pattern, but sticking to standard structure for now or ensure proper import if available
 import { Slot } from "@radix-ui/react-slot"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 transition-all duration-300",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-semibold ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
-        default: "bg-primary text-[#0B1220] hover:bg-primary/90 shadow-[0_0_15px_-5px_var(--color-primary)] font-semibold",
+        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-[0_4px_6px_-1px_rgba(0,0,0,0.1)] hover:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] hover:-translate-y-0.5",
         destructive:
-          "bg-red-900 border border-red-800 text-red-100 hover:bg-red-800",
+          "bg-red-500 text-white hover:bg-red-600",
         outline:
-          "border border-primary/20 bg-transparent text-primary hover:bg-primary/10 hover:border-primary/50",
+          "border-2 border-primary bg-transparent text-primary hover:bg-primary hover:text-white hover:-translate-y-0.5",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-white/5",
-        ghost: "hover:bg-accent hover:text-white text-muted-foreground",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/90",
+        ghost: "hover:bg-accent/10 hover:text-primary",
         link: "text-primary underline-offset-4 hover:underline",
-        gradient: "bg-linear-to-r from-primary to-accent text-white hover:opacity-90 shadow-lg hover:shadow-primary/20 border border-white/10",
+        gradient: "bg-gradient-to-r from-primary to-[#7C3AED] text-white hover:opacity-90 shadow-md hover:-translate-y-0.5",
       },
       size: {
-        default: "h-10 px-6 py-2",
-        sm: "h-9 rounded-md px-4",
-        lg: "h-12 rounded-md px-8 text-base",
-        icon: "h-10 w-10",
+        default: "h-12 px-8 py-3", // Taller 50px approx
+        sm: "h-10 rounded-full px-6",
+        lg: "h-14 rounded-full px-10 text-lg",
+        icon: "h-10 w-10 rounded-full",
       },
     },
     defaultVariants: {

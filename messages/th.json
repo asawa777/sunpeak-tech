@@ -89,6 +89,9 @@
     "ctaPrimary": "สำรวจโซลูชัน",
     "ctaSecondary": "ขอคำปรึกษา"
   },
+  "section_projects": {
+    "title": "ดูผลงานของเรา"
+  },
   "servicesGrid": {
     "sectionTitle": "บริการไอทีครบวงจร",
     "sectionSubtitle": "โซลูชันเทคโนโลยีแบบ End-to-End ที่ออกแบบมาเพื่อรองรับการเติบโตและการขยายตัวขององค์กร",

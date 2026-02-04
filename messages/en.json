@@ -89,6 +89,9 @@
     "ctaPrimary": "Explore Solutions",
     "ctaSecondary": "Request Consultation"
   },
+  "section_projects": {
+    "title": "View Portfolio"
+  },
   "servicesGrid": {
     "sectionTitle": "Comprehensive IT Services",
     "sectionSubtitle": "End-to-end technology solutions designed to scale with your business needs.",
