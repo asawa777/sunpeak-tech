@@ -117,24 +117,6 @@ export const siteConfig = {
        ]
     },
     {
-       title: "nav.innovation", // Research Initiatives etc
-       href: "/innovation-rnd",
-       items: [
-          { title: "nav.research_initiatives", href: "/innovation-rnd/research-initiatives" },
-          { title: "nav.tech_labs", href: "/innovation-rnd/technology-labs" },
-          { title: "nav.academic_collab", href: "/innovation-rnd/academic-collaboration" },
-          { title: "nav.publications", href: "/innovation-rnd/publications-insights" },
-       ]
-    },
-    {
-       title: "nav.news", // Articles & Insights
-       href: "/news-resources",
-       items: [
-          { title: "nav.articles", href: "/news-resources/articles-insights" },
-          { title: "nav.faqs", href: "/news-resources/faqs" },
-       ]
-    },
-    {
        title: "nav.careers", // Why Work With Us
        href: "/careers",
        items: [
