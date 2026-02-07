@@ -2,9 +2,9 @@
 
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import logos from "@/public/logos.json";
 import { cn } from "@/lib/utils";
+import { LogoCard } from "@/components/ui/logo-card";
+import logos from "@/public/logos.json";
 
 export function LogoTicker() {
   // Use all logos for a single long row
@@ -24,28 +24,14 @@ export function LogoTicker() {
 
         {/* The Ticker Track */}
         <div className="flex w-full overflow-hidden select-none group mask-image-b-linear-gradient">
-            <div
-                className="flex gap-8 min-w-max items-center animate-infinite-scroll group-hover:[animation-play-state:paused]"
-            >
-                {/* We map the duplicated set. 
-                    Since we animate to -50% (half width), we need enough width to cover the screen plus scroll.
-                */}
+            {/* Ticker Container with Liquid Spacing */}
+            <div className="flex w-max min-w-full animate-infinite-scroll group-hover:[animation-play-state:paused] gap-8 pl-8">
                 {logoSet.map((logo, idx) => (
-                    <div
+                    <LogoCard 
                         key={`ticker-${idx}`}
-                        className="relative h-24 w-48 flex-shrink-0 flex items-center justify-center 
-                                   hover:scale-110 transition-all duration-300 ease-out cursor-pointer group/card"
-                    >
-                        <div className="relative w-full h-full p-6 opacity-60 grayscale group-hover/card:opacity-100 group-hover/card:grayscale-0 transition-all duration-300">
-                             <Image
-                                src={logo}
-                                alt={`Partner Logo ${idx}`}
-                                fill
-                                className="object-contain"
-                                sizes="200px"
-                            />
-                        </div>
-                    </div>
+                        src={logo}
+                        alt={`Partner Logo ${idx}`}
+                    />
                 ))}
             </div>
         </div>

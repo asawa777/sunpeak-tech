@@ -43,19 +43,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
-    --foreground: #ffffff;
+    --background: #001732; /* Vivid Navy Base */
+    --foreground: #F8FAFC; /* Clean White */
     
-    --primary: #2d88ff;
+    --primary: #4361EE; /* Vivid Royal Blue */
     --primary-foreground: #ffffff;
     
-    --secondary: #1c1e21;
-    --secondary-foreground: #e4e6eb;
+    --secondary: #002855; /* Lighter Vivid Navy */
+    --secondary-foreground: #BDE0FE; /* Pale Blue */
 
-    --muted: #1f2937;
-    --muted-foreground: #9ca3af;
+    --muted: #002855; 
+    --muted-foreground: #94A3B8; /* Cool Grey */
     
-    --border: #374151;
+    --border: #1e3a8a; /* Blue-ish border */
   }
 }
 
